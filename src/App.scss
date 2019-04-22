@@ -53,12 +53,13 @@
 
 .skills{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: row;  
+  justify-content: center;
   .stack{
     width: 25%;
     background-color: #aaabb865;
     border-radius:15px;
+    margin:0px 24px 24px 24px;
     &__list{
       display: flex;
       flex-direction: row;
