@@ -52,5 +52,26 @@
 }
 
 .skills{
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .stack{
+    width: 25%;
+    background-color: #aaabb865;
+    border-radius:15px;
+    &__list{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      .skill{
+        list-style-type: none;
+        margin: 10px 20px;
+        &__img{
+          width:100px;
+          height: 100px;
+        }
+      }
+    }
+  }
 }
