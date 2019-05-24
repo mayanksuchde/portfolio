@@ -1,13 +1,81 @@
+@import "./assets/fira-font/stylesheet.css";
 
+body{
+  background-color: #25274d;
+  font-family: "Fira Code";
+}
 .App {
   text-align: center;
-  background-color: #25274d;
-  color:#2e9cca;
+  color:#f7f8f8;
+  
 }
 
 @mixin fillScreen {
+  scroll-snap-align: start;
   width:100%;
   height: stretch;
+  z-index: 2;
+
+}
+
+@mixin div-same-size-as-background-img() 
+  { 
+    // background-image: url($url); 
+     
+    background-repeat: repeat-y; 
+    width: 100%; 
+    height: 0; 
+    padding-top:3023px; 
+  }
+// ======================================================Parallax Background=================================================================================
+
+.bg{
+  position: absolute;
+  top:0;
+  left:0;
+  background-size: contain; 
+  background-repeat: repeat-y; 
+  width: 100%; 
+  z-index: -1;
+    // height: 0; 
+    // padding-top:3600px; 
+}
+.parallax{
+  @include div-same-size-as-background-img();
+  position: absolute;
+  top:0;
+  height:stretch;
+  width:100%;
+  z-index: -2;
+  div{
+    position: absolute;
+    div{
+      div{
+        background-position-y: start;
+      }
+    }
+  }
+  // &__layer-1{
+  //   @include div-same-size-as-background-img("./assets/bg/smallrecs.svg")
+  // }
+  // &__layer-2{
+  //   @include div-same-size-as-background-img("./assets/bg/medrecs.svg");
+  // }
+  // &__layer-3{
+  //   @include div-same-size-as-background-img("./assets/bg/largerecs.svg");
+  // }
+}
+
+
+
+// ======================================================Parallax Background=================================================================================
+.main{
+  scroll-snap-type: y mandatory;
+
+}
+
+h1{
+  font-size: 60px;
 }
 
 .home{
@@ -57,7 +125,7 @@
   justify-content: center;
   .stack{
     width: 25%;
-    background-color: #aaabb865;
+    background-color: #aaabb885;
     border-radius:15px;
     margin:0px 24px 24px 24px;
     &__list{
@@ -72,6 +140,80 @@
           width:100px;
           height: 100px;
         }
+      }
+    }
+  }
+}
+
+.projects_container{
+  @include fillScreen();
+  ul{
+    margin-top:12%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    li{
+      background-color: #aaabb865;
+      border-radius:15px;
+      list-style-type: none;
+    }
+  }
+}
+
+.project{
+  width:460px;
+  h2{
+    text-align: left;
+    
+  }
+  img{
+    width:400px;
+  }
+}
+
+.contact{
+  @include fillScreen();
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    form{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      label{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        input{
+          width: 70%;
+          height: 48px;
+          border-radius: 5px;
+          
+        }
+        textarea{
+          height:180px;
+          width: 70%;
+        }
+
+      }
+      input[type="submit"]{
+        width:50%;
+        height:48px;
+        border-radius: 5px;
+        align-self: flex-end;
+        background-color: #2e9cca;
+        border:none;
+        color: #25274d;
+        font-family: "Fira Code";
+        font-weight: medium;
+        font-size: 24px;
       }
     }
   }

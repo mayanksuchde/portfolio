@@ -80,7 +80,3 @@ export const otherTools=[
                     img:adobexdImg
                 }
 ];
-
-
-
-        console.log(frontEnd);
