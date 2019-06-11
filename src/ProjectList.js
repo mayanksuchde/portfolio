@@ -11,7 +11,7 @@ export default class ProjectList extends Component {
         name:"Warbler",
         description:"It is a mini version of twitter where a User can start posting messages upto 280 characters",
         stack:[],
-        gitLink:"",
+        gitLink:"#",
         liveDemo:"",
         screenshot:warbImg
       },
@@ -27,7 +27,7 @@ export default class ProjectList extends Component {
         name:"RGB game",
         description:"It is a mini version of twitter where a User can start posting messages upto 280 characters",
         stack:[],
-        gitLink:"",
+        gitLink:"#",
         liveDemo:"",
         screenshot:rgbImg
       }
