@@ -11,7 +11,6 @@ body{
 }
 
 @mixin fillScreen {
-  scroll-snap-align: start;
   width:100%;
   height: stretch;
   z-index: 2;
@@ -120,6 +119,7 @@ h1{
 }
 
 .skills{
+  @include fillScreen();
   display: flex;
   flex-direction: row;  
   justify-content: center;
@@ -127,7 +127,7 @@ h1{
     width: 25%;
     background-color: #aaabb885;
     border-radius:15px;
-    margin:0px 24px 24px 24px;
+    margin:24px 24px 24px 24px;
     &__list{
       display: flex;
       flex-direction: row;
@@ -137,8 +137,8 @@ h1{
         list-style-type: none;
         margin: 10px 20px;
         &__img{
-          width:100px;
-          height: 100px;
+          width:5rem;
+          height: 5rem;
         }
       }
     }
@@ -149,25 +149,39 @@ h1{
   @include fillScreen();
   ul{
     margin-top:12%;
+    flex-direction: row;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     li{
-      background-color: #aaabb865;
+      background-color: #a1a1c2;
       border-radius:15px;
       list-style-type: none;
+      width:30%;
     }
   }
 }
 
 .project{
-  width:460px;
+  width:100%;
   h2{
     text-align: left;
     
   }
   img{
-    width:400px;
+    width:90%;
+  }
+  &__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    svg{
+      width:36px;
+      height:36px;
+    }
   }
 }
 
