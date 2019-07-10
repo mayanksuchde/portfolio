@@ -8,7 +8,7 @@ export default class About extends Component {
       <div className='about'>
         <h2>About</h2>
         <div className='about__content'>
-            <p>I am a MERN stack developer based in Toronto. I create dynamic and responsive Single Page Applications (SPA). I love learning about new and interesting JS libraries and frameworks. Along with coding, my passion lies in exploring different cuisines of the world.</p>
+            <p>I am a Full Stack Developer based in Toronto who is passionate about creative problem solving and creating beautiful and interactive web applications.My experience in solving customer queries and my drive to keep learning new technologies empowers me to create digital products that are user-friendly and responsive across all devices.</p>
             <div className='about__content__imgdiv'>
                 <img src='./profile_pic.jpg' alt="Profile"/>
             </div>

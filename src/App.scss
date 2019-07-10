@@ -116,91 +116,9 @@ h2{
   }
 }
 
-.skills{
-  @include fillScreen();
-  display: flex;
-  flex-direction: row;  
-  justify-content: center;
-  .stack{
-    width: 25%;
-    background-color: #aaabb885;
-    border-radius:15px;
-    margin:24px 24px 24px 24px;
-    &__list{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      .skill{
-        list-style-type: none;
-        margin: 10px 20px;
-        &__img{
-          width:5rem;
-          height: 5rem;
-        }
-      }
-    }
-  }
-}
 
-.projects_container{
-  @include fillScreen();
-  ul{
-    margin-top:12%;
-    flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    li{
-      background-color: #a1a1c2;
-      border-radius:15px;
-      list-style-type: none;
-      width:30%;
-    }
-  }
-}
 
-.project{
-  width:100%;
-  h2{
-    text-align: left;
-    
-  }
-  img{
-    width:90%;
-  }
-  &__content{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    text-align: left;
-    width: 90%;
-    margin: auto;
-    svg{
-      width:36px;
-      height:36px;
-    }
-  }
-  .buttons{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin:0 20px 0 12px;
-    p{
-      text-align: left;
-      width:64%;
-      height: none;
-      overflow: hidden;
-    }
-    a{
-      cursor: pointer;
-      img{
-        height:24px;
-        width: 24px;
-      }
-    }
-  }
-}
+
 
 .contact{
   @include fillScreen();

@@ -1,7 +1,14 @@
+$lightBlue:#2e9cca;
 
+@mixin fillScreen {
+  width:100%;
+  height: 100vh;
+  z-index: 2;
+}
 
   
   .project{
+    color:#241864;
     width:30%;
     h2{
       text-align: left;
@@ -9,5 +16,64 @@
     }
     img{
       width:90%;
+    }
+  }
+
+  .projects_container{
+    @include fillScreen();
+    ul{
+      margin-top:12%;
+      flex-direction: row;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      li{
+        background-image:linear-gradient(to bottom right,#757ab8, #919db6) ;
+        border-radius:15px;
+        list-style-type: none;
+        width:30%;
+      }
+    }
+  }
+  
+  .project{
+    width:100%;
+    h2{
+      text-align: left;
+      
+    }
+    img{
+      width:90%;
+    }
+    &__content{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      text-align: left;
+      width: 90%;
+      margin: auto;
+      svg{
+        width:36px;
+        height:36px;
+      }
+    }
+    .buttons{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin:0 20px 0 12px;
+      p{
+        text-align: left;
+        width:64%;
+        height: none;
+        overflow: hidden;
+      }
+      a{
+        cursor: pointer;
+        img{
+          height:24px;
+          width: 24px;
+        }
+      }
     }
   }
