@@ -27,26 +27,26 @@ const styles = theme => ({
   },
   container:{
     width:"100%",
-    height:"80vh",
+    height:"88vh",
     display:"flex",
     color:"#241864",
   },
   mainContent:{
-    width:"80%",
     padding:"1rem",
     display:"flex",
     flexDirection:"row",
     flexWrap:"wrap",
     justifyContent:"flex-start"
   },
+  buttons:{
+  },
+  button:{
+  
+      },
   Carousel:{
     width:"65%",
   },
-  sideContent:{
-    display:"flex",
-    flexDirection:"column",
-    width:"20%"
-  },
+  
   stackContainer:{
     width:"30%",
     margin:"auto",
@@ -118,7 +118,7 @@ class ProjectDialog extends React.Component {
                     {details.screenshot.map((pic)=>(
                       <div>
                         <img className={classes.image} src={pic} alt="Screenshot"/>
-                        <p>Whatever</p>
+                        
                       </div>
                     ))}
                   </Carousel>
@@ -127,25 +127,20 @@ class ProjectDialog extends React.Component {
                     {details.stack.map((icon)=>(
                       <StackIcon icon={icon} className={classes.icon} />
                     ))}
-                    <Button variant="contained" color="primary" className={classes.button}>
-                      Github Repo
-                      <GitIcon />
-                    </Button>
-                    <Button variant="contained" color="primary" className={classes.button}>
-                      Live demo
-                      <GitIcon />
-                    </Button>
+                    <div className={classes.buttons}>
+                      <Button variant="contained" color="primary" className={classes.button}>
+                        Git Repo
+                        <GitIcon />
+                      </Button>
+                      <Button variant="contained" color="primary" className={classes.button}>
+                        Live demo
+                        <GitIcon />
+                      </Button>
+                    </div>
                   </div>
                   <p>{details.description}</p>
                 </div>
-                <div className={classes.sideContent}>
-                  
-                  {/* githublink */}
-                  <IconButton size="small"  target="_blank" href={details.gitLink} >
-                      <GitIcon />
-                  </IconButton>
-                  {/* liveDemoLink if possible */}
-                </div>
+                
                 
 
             </div>
