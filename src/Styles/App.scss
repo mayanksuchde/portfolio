@@ -1,10 +1,5 @@
-@import "./assets/fira-font/stylesheet.css";
-
-//==============Colors======================
-
-$lightBlue:#2e9cca;
-$darkBlue:#25274d;
-
+@import "../assets/fira-font/stylesheet.css";
+@import "./Variables.scss";
 
 
 body{
@@ -23,73 +18,62 @@ body{
   z-index: 2;
 }
 
-@mixin div-same-size-as-background-img() 
-  { 
-    background-repeat: repeat-y; 
-    width: 100%; 
-    height: 0; 
-    padding-top:3023px; 
-  }
-// ======================================================Parallax Background=================================================================================
+// @mixin div-same-size-as-background-img() 
+//   { 
+//     background-repeat: repeat-y; 
+//     width: 100%; 
+//     height: 0; 
+//     padding-top:3023px; 
+//   }
+// // ======================================================Parallax Background=================================================================================
 
-.bg{
-  position: absolute;
-  top:0;
-  left:0;
-  background-size: contain; 
-  background-repeat: repeat-y; 
-  width: 100%; 
-  z-index: -1;
-}
-.parallax{
-  @include div-same-size-as-background-img();
-  position: absolute;
-  top:0;
-  height:stretch;
-  z-index: -2;
-  div{
-    position: absolute;
-    div{
-      div{
-        background-position-y: start;
-      }
-    }
-  }
-}
+// .bg{
+//   position: absolute;
+//   top:0;
+//   left:0;
+//   background-size: contain; 
+//   background-repeat: repeat-y; 
+//   width: 100%; 
+//   z-index: -1;
+// }
+// .parallax{
+//   @include div-same-size-as-background-img();
+//   position: absolute;
+//   top:0;
+//   height:stretch;
+//   z-index: -2;
+//   div{
+//     position: absolute;
+//     div{
+//       div{
+//         background-position-y: start;
+//       }
+//     }
+//   }
+// }
 
 
 
 // ======================================================Parallax Background=================================================================================
 .main{
-  
-  div{
-    scroll-snap-align: start;
-  }
+  position: relative;
+  top:0;
+  left:0;
+ 
 }
 
 
-h1{
-  font-size: 60px;
-}
+
 h2{
   font-size: 40px;
+  margin-top:0;
 }
 
-.home{
-  @include fillScreen();
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h4{
-    color:$lightBlue;
-  }
-}
+
 
 .about{
   @include fillScreen();
   width: 100%;
-  height: stretch;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -100,15 +84,14 @@ h2{
     justify-content: space-around;
     height: 100%;
     margin: auto 120px;
+    align-items: center;
     p{
       width:60%;
-      align-self: center;
-
     }
     &__imgdiv{
-      border-radius:50%; 
-      overflow: hidden;
+     
       img{
+        border-radius:50%;
         width: 300px;
         height:300px;
       }
@@ -116,8 +99,9 @@ h2{
   }
 }
 
-
-
+.skills-container{
+  @include fillScreen()
+}
 
 
 .contact{

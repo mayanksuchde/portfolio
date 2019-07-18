@@ -88,7 +88,7 @@ class ProjectDialog extends React.Component {
       const {details,classes}=this.props;
     return (
       <div>
-        <IconButton variant="outlined" color="#241864" onClick={this.handleClickOpen}>
+        <IconButton variant="outlined" color="primary" onClick={this.handleClickOpen}>
             <FullscreenRounded />
         </IconButton>
         <Dialog
@@ -115,17 +115,16 @@ class ProjectDialog extends React.Component {
                     showIndicators={false}
                     showThumbs={false}
                     swipeable={true} >
-                    {details.screenshot.map((pic)=>(
+                    {details.screenshot.map((pic,i)=>(
                       <div>
-                        <img className={classes.image} src={pic} alt="Screenshot"/>
-                        
+                        <img key={i} className={classes.image} src={pic} alt="Screenshot"/>  
                       </div>
                     ))}
                   </Carousel>
                   <div className={classes.stackContainer}>
                     <h3>Tech Stack</h3>
-                    {details.stack.map((icon)=>(
-                      <StackIcon icon={icon} className={classes.icon} />
+                    {details.stack.map((icon,i)=>(
+                      <StackIcon key={i} icon={icon} className={classes.icon} />
                     ))}
                     <div className={classes.buttons}>
                       <Button variant="contained" color="primary" className={classes.button}>

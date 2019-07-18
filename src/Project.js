@@ -1,5 +1,5 @@
 import React from 'react';  
-import './Project.scss';
+import './Styles/Project.scss';
 import {FullscreenRounded,LayersRounded} from '@material-ui/icons/';
 import { IconButton } from '@material-ui/core';
 import ProjectDialog from './ProjectDialog';

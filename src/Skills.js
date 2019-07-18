@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import SkillSection from './SkillSection';
 import {frontEnd,backEnd,otherTools} from './skillslist';// should be in the same foldeer a  this file...
-import './Skills.scss';
+import './Styles/Skills.scss';
 export default class Skills extends Component {
 
   render() {

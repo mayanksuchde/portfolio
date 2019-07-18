@@ -7,20 +7,11 @@ $lightBlue:#2e9cca;
 }
 
   
-  .project{
-    color:#241864;
-    width:30%;
-    h2{
-      text-align: left;
-      
-    }
-    img{
-      width:90%;
-    }
-  }
+  
 
   .projects_container{
     @include fillScreen();
+    
     ul{
       margin-top:12%;
       flex-direction: row;
@@ -37,6 +28,7 @@ $lightBlue:#2e9cca;
   }
   
   .project{
+    color:#241864;
     width:100%;
     h2{
       text-align: left;

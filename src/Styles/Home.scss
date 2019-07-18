@@ -1,0 +1,58 @@
+@import "./App.scss";
+@import './Variables.scss';
+
+.home{
+    @include fillScreen();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+      font-size: 60px;
+      width:"auto";
+      @media (max-width:$tablet) {
+            font-size: 45px;
+        }
+    }
+    .subheaders{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width:70%;
+      color:$lightBlue;
+      font-weight: 500;
+      h4{
+        width:100%;
+      }
+      & :nth-child(2){
+        border-left:solid 2px $lightBlue;
+        border-right:solid 2px $lightBlue;
+        @media (max-width:$mobile) {
+          border-left: none;
+          border-right: none;
+        }
+      }
+      @media (max-width:$tablet) {
+        width: 85%
+      }
+      @media (max-width:$mobile) {
+        flex-direction: column;
+      }
+    }
+    .socials{
+      margin-top: 20px;
+      width: 30%;
+      display: flex;
+      justify-content: space-between;
+      @media (max-width:$mobile){
+        width:45%;
+      }
+        svg{
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+        }
+        
+    }
+  }

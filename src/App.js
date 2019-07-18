@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import {ParallaxProvider,ParallaxBanner} from 'react-scroll-parallax';
+import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 import Home from './Home';
 import About from './About';
 import Skills from './Skills';
 import ProjectList from  './ProjectList';
 import Contact from './Contact';
-import smallSq from './assets/bg/smallrecs.svg'
-import medSq from './assets/bg/medrecs.svg'
-import largeSq from './assets/bg/largerecs.svg'
-import './App.scss';
+import {ReactComponent as SmallSq} from './assets/bg/smallrecs.svg'
+import {ReactComponent as MedSq} from './assets/bg/medrecs.svg'
+import {ReactComponent as LargeSq} from './assets/bg/largerecs.svg'
+import './Styles/App.scss';
 
 
 class App extends Component {
@@ -16,44 +16,25 @@ class App extends Component {
    
     return (
         <div className="App">
-          <div className='main'>
-            <Home  />
-            <About />
-            <Skills />
-            <ProjectList />
-            <Contact />
-          </div>
-          <div className="bg">
-
-          <ParallaxProvider>
-            <ParallaxBanner 
-                className="parallax"
-                layers={[
-                  {
-                    image: `${smallSq}`,
-                    amount: 0.1,
-                  },
-                  {
-                    image: `${medSq}`,
-                    amount: -0.4,
-                  },
-                  {
-                    image: `${largeSq}`,
-                    amount: -0.8,
-                  }   
-                ]}
-                styles={{
-                  postion:"absolute",
-                  backgroundSize:"contain"
-                }}
-                
-                >
-                {/* <div className="parallax__layer-1"></div>
-                <div className="parallax__layer-2"></div>
-              <div className="parallax__layer-3"></div> */}
-            </ParallaxBanner>
-          </ParallaxProvider>
-          </div>
+          <Parallax pages={5} >
+            <ParallaxLayer offset={0} speed={0.1}>
+              <SmallSq />
+            </ParallaxLayer>
+            <ParallaxLayer offset={0} speed={0.5}>
+              <MedSq />
+            </ParallaxLayer>
+            <ParallaxLayer offset={0} speed={1}>
+              <LargeSq />
+            </ParallaxLayer>  
+            
+            <div className='main'>
+              <Home  />
+              <About />
+              <Skills />
+              <ProjectList />
+              <Contact />
+            </div>
+          </Parallax>
         </div>
     );
   }
