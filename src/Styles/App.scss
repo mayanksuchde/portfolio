@@ -53,8 +53,15 @@ body{
 // }
 
 
-
-// ======================================================Parallax Background=================================================================================
+.parallax{
+  
+  svg{
+      @media (max-width:$tablet){
+        height:fit-content;
+        
+    }
+  }
+}
 .main{
   position: relative;
   top:0;
@@ -94,6 +101,10 @@ h2{
         border-radius:50%;
         width: 300px;
         height:300px;
+        @media(max-width: $laptop){
+          width: 200px;
+          height:200px;
+        }
       }
     }
   }
