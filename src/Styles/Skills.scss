@@ -1,13 +1,26 @@
-
+@import "./Variables.scss";
 .skills{
     
     display: flex;
     flex-direction: row;  
     justify-content: center;
     height:80%;
+    @media(max-width: $mobile) {
+      flex-direction: column;
+
+    }
     .stack{
         width: 25%;
-        height: 95%;
+        height: fit-content;
+        min-height: 80%;
+        @media(max-width: $tablet) {
+          // max-height: 510px;
+          // height:70%;
+        }
+        @media(max-width: $mobile) {
+          min-height: 32%;
+          width: 90%;
+        }
         background-image:linear-gradient(to bottom right,#757ab8, #919db6) ;
         border-radius:15px;
         margin:0px 24px 24px 24px;
@@ -22,10 +35,27 @@
         .skill{
           list-style-type: none;
           margin: 10px 30px;
+          @media(max-width: $laptop) {
+            margin:8px 20px;
+          }
+          @media(max-width: $tablet) {
+            margin:8px 14px;
+          }
+          @media(max-width: $mobile) {
+            margin:6px 8px;
+          }
         
           &__img{
             width:3.5rem;
             height: 3.5rem;
+            @media(max-width: $laptop) {
+              width:3.8rem;
+              height: 3.8rem;
+            }
+            @media(max-width: $tablet) {
+              width:2rem;
+              height: 2rem;
+            }
           }
           h6{
             font-size:16px;
@@ -34,4 +64,5 @@
         }
       }
     }
+    
   }

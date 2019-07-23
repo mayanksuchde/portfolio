@@ -1,4 +1,4 @@
-$lightBlue:#2e9cca;
+@import "./Variables.scss";
 
 @mixin fillScreen {
   width:100%;
@@ -44,9 +44,20 @@ $lightBlue:#2e9cca;
       text-align: left;
       width: 90%;
       margin: auto;
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        justify-content: space-between;
+        height:30%;
+      }
+      .actions{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between
+      }
       svg{
         width:36px;
-        height:36px;
+        height:36px !important;
+        
       }
     }
     .buttons{
