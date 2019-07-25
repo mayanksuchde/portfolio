@@ -32,6 +32,9 @@
         flex-wrap: wrap;
         justify-content: center;
         padding: 0;
+        @media(max-width: $mobile) {
+          flex-wrap: nowrap;
+        }
         .skill{
           list-style-type: none;
           margin: 10px 30px;
@@ -43,6 +46,7 @@
           }
           @media(max-width: $mobile) {
             margin:6px 8px;
+            
           }
         
           &__img{
@@ -60,6 +64,9 @@
           h6{
             font-size:16px;
             margin:1%;
+            @media(max-width: $mobile) {
+              font-size: 12px;
+            }
           }
         }
       }

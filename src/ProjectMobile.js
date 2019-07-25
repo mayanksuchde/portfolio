@@ -1,14 +1,20 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/core/styles';
+import {WebRounded} from '@material-ui/icons/';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import Typography from '@material-ui/core/Typography';
+import StackList from './StackList'
+import Button from '@material-ui/core/Button';
+import {ReactComponent as GitIcon} from './assets/othertools/github.svg';
+import './Styles/Project.scss';
 
 const ExpansionPanel = withStyles({
     root: {
-      border: '1px solid rgba(0, 0, 0, .125)',
+      width:"90%",
+      
+      margin:"auto",
       borderRadius:'5px',
       boxShadow: 'none',
       '&:not(:last-child)': {
@@ -26,12 +32,14 @@ const ExpansionPanel = withStyles({
   
   const ExpansionPanelSummary = withStyles({
     root: {
-      backgroundColor: 'rgba(0, 0, 0, .03)',
+    backgroundImage:"linear-gradient(to right,#B256D5, #4E4EA2)" ,
       borderBottom: '1px solid rgba(0, 0, 0, .125)',
       marginBottom: -1,
-      minHeight: 56,
+      height:56,
+      minHeight: 26,
       '&$expanded': {
-        minHeight: 56,
+        minHeight: 26,
+      
       },
     },
     content: {
@@ -44,37 +52,64 @@ const ExpansionPanel = withStyles({
   
   const ExpansionPanelDetails = withStyles(theme => ({
     root: {
+      backgroundImage:"linear-gradient(to right,#757ab8, #919db6)" ,
       padding: theme.spacing(2),
+      maxHeight:"40vh",
+      overflow:"scroll",
+      display:"flex",
+      flexDirection:"column"
     },
   }))(MuiExpansionPanelDetails);
   
-
-export default function ProjectMobile({details,index}) {
+  const useStyles = makeStyles(theme => ({
+    buttons:{
+        display:"flex",
+        flexDirection:"row",
+        height:"48px",
+        alignItems:"center",
+        fontSize:"10px",
+        margin:"0 4px",
+        justifyContent:"space-around",
+        "& svg":{
+            height:"36px",
+            width:"36px"
+        }
+    }
+  }));
+export default function ProjectMobile({list}) {
+    const classes = useStyles();
   const [expanded, setExpanded] = React.useState('panel1');
-
-  const handleChange = panel => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
+  const handleChange = panel => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
-// 
-
-//this wont work here because of each expansion panel is getting his own state...
-
-//so we have to take expanded and setexpanded to parent
-
-//may be create our own hook and then change pass the value to the these children 
-
-
-//================
   return (
-    <ExpansionPanel square expanded={expanded === `panel${index+1}`} onChange={handleChange(`panel${index+1}`)}>
-        <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>Collapsible Group Item #1</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-              {details.name}
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+      <div className="ProjectMobile">
+        {list.map((proj,index)=>
+            <ExpansionPanel key={index} square expanded={expanded === `panel${index+1}`} onChange={handleChange(`panel${index+1}`)}>
+                 <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
+                    <h3>{proj.name}</h3>
+                    
+                 </ExpansionPanelSummary>
+                 <ExpansionPanelDetails>
+                    
+                   <p>{proj.description}</p>
+                    {/* 1 button for github and one for live code.(if live code is not empty only then ...) */}
+                    <StackList stack={proj.stack} />
+                    <div className={classes.buttons}>
+                      <Button variant="contained" color="primary" >
+                        Git Repo
+                        <GitIcon />
+                      </Button>
+                      <Button variant="contained" color="secondary" >
+                        Live demo
+                        <WebRounded />
+                      </Button>
+                    </div>
+                    
+                 </ExpansionPanelDetails>
+            </ExpansionPanel>     
+            )}  
+      </div>
+   
   );
 }

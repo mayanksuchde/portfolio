@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import downloadIcon from './assets/download.svg';
+import {ReactComponent as DownloadIcon} from './assets/download.svg';
 import resume from './assets/resume.pdf';
+import {OpenInNewRounded} from '@material-ui/icons'
 import axios from 'axios';
+import Button from '@material-ui/core/Button';
+
+import './Styles/Contact.scss';
 
 export default class Contact extends Component {
   constructor(props){
@@ -39,6 +43,7 @@ export default class Contact extends Component {
       name: '',
       message: '',
       email: '',
+      subject:'',
       buttonText: 'Message Sent'
     })
   }
@@ -48,8 +53,7 @@ export default class Contact extends Component {
     return (
       <div className='contact'>
         <h2>Get In Touch</h2>
-          <div className="content">
-
+        <div className="content">
           <form onSubmit={e=>this.formSubmit(e)}>
             <label htmlFor="name">Name:
               <input onChange={e=>this.setState({name:e.target.value})} type="text" name="name" value={this.state.name} id=""/>
@@ -57,24 +61,24 @@ export default class Contact extends Component {
             <label htmlFor="email">Email:
               <input onChange={e=>this.setState({email:e.target.value})} type="text" name="email" value={this.state.email} />
             </label>
-            <label htmlFor="subject">Email:
+            <label htmlFor="subject">Subject:
               <input onChange={e=>this.setState({subject:e.target.value})} type="text" placeholder="Subject" name="subject" value={this.state.subject} />
             </label>
             <label htmlFor="message">Message:
-              <textarea onChange={e=>this.setState({message:e.target.message})} name="subject" placeholder="enter your message">
+              <textarea onChange={e=>this.setState({message:e.target.message})} name="subject" placeholder="Enter your message">
               </textarea>
             </label> 
             <input type="submit"  value={this.state.buttonText}/>
           </form>
-          <div>
-            <form target="_blank" action={resume} method="get">
-              <button type='submit' className="resume">
-                <img src={downloadIcon} alt="Download" />
-                Download Resume
-              </button>
-            </form>
-          </div>
+        <div className="ResumeForm" > 
+          <form target="_blank" action={resume} method="get">
+            <Button type="submit">
+              View Resume
+              <OpenInNewRounded />
+            </Button>
+          </form>
         </div>
+      </div>
       </div>
     )
   }

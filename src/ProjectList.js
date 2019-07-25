@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import Project from './Project';
 import projArr from './projectDetails';
 import ProjectMobile from './ProjectMobile';
-import throttle from 'lodash.throttle';
+
 
 export default class ProjectList extends Component {
   
   state = {
-    isMobile: false
+    isMobile: false,
+  
   }
 
   
@@ -17,7 +18,7 @@ export default class ProjectList extends Component {
   }
   resize() {
     this.setState({isMobile:window.innerWidth<525});
-}
+  }
 
 
   componentWillUnmount=()=>{
@@ -30,7 +31,7 @@ export default class ProjectList extends Component {
         <h2>Projects</h2>
         {
           isMobile?
-            (projArr.map((p,i)=><ProjectMobile details={p} index={i} />))
+            (<ProjectMobile list={projArr} />)
             :
               <ul>
                 {projArr.map((p,i)=><li key={i}><Project details={p} /></li>)}

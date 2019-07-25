@@ -24,7 +24,7 @@ export default [
       {
         name:"plan-react-app",
         shortDesc:"twitter clone",
-        description:"It is a mini version of twitter where a User can start posting messages upto 280 characters Qui cillum incididunt ea adipisicing voluptate sit reprehenderit. Proident sint adipisicing id voluptate aliqua fugiat adipisicing labore ea sit dolor fugiat voluptate mollit. Exercitation voluptate reprehenderit est ea nostrud eiusmod voluptate Lorem commodo cillum laborum consectetur. Elit ad esse in ullamco cupidatat amet. Aliquip ut proident laboris eu tempor. Fugiat non culpa et aliqua duis laborum amet. Velit enim deserunt cupidatat et non elit sunt eu ut aliquip ipsum proident enim.",
+        description:"Plan react app is a tool for React developers to plan their component hierarchy before they even begin coding In this app a user can start creating a Tree for React Components. This helps with the planning process and allow the user to manage the entire state of the app. User is given with the main App Component node where you can start adding props, state and its child components from the tool box. User can also drag and drop state and props from parent to its child component in the toolbox. If user wants to grow his app they can select a particular node on the tree and start adding children.This app uses React and D3.js and Node,Mongo and Express on the backend",
         stack:[{name:"React",icon:reactSVG},{name:"D3.js",icon:d3SVG},{name:"Node.js",icon:nodeSVG},{name:"SCSS",icon:ScssSVG}],
         gitLink:"https://github.com/mayanksuchde/plan-react-app",
         liveDemo:"",

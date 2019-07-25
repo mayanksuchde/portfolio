@@ -52,7 +52,8 @@
       .actions{
         display: flex;
         flex-direction: row;
-        justify-content: space-between
+        justify-content: space-between;
+        align-items: center;
       }
       svg{
         width:36px;
@@ -79,4 +80,27 @@
         }
       }
     }
+  }
+.StackList{
+  width:98%;
+  margin: auto;
+  margin-bottom: 12px;
+  border:2px solid #241864;
+  border-radius: 5px;
+  img{
+    height:28px;
+    margin:4px;
+  }
+}
+
+  .ProjectMobile{
+    height:75%;
+    // .CarouselMobile{
+    //   height:200px;
+    //   width:300px;
+    //   img{
+    //     height:200px;
+    //   width:300px;
+    //   }
+    // }
   }

@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Button from '@material-ui/core/Button';
 import StackIcon from './StackIcon';
-import {FullscreenRounded} from '@material-ui/icons/';
+import {FullscreenRounded,WebRounded} from '@material-ui/icons/';
 import { IconButton } from '@material-ui/core';
 import GitIcon from './GitIcon';
 const styles = theme => ({
@@ -39,17 +39,26 @@ const styles = theme => ({
     justifyContent:"flex-start"
   },
   buttons:{
+    display:"flex",
+    flexWrap:"wrap",
+    justifyContent:"center",
   },
   button:{
-  
+    margin:"3px"
       },
   Carousel:{
-    width:"65%",
+    
   },
-  
+  desc:{
+    alignSelf:"flex-start",
+    width:"fit-content",
+    marginBottom:"16px"
+  },
   stackContainer:{
-    width:"30%",
-    margin:"auto",
+    minWidth:"28%",
+    postion:"relative",
+    float:"left",
+    margin:theme.spacing(3),
     display:"flex",
     flexWrap:"wrap",
     justifyContent:"center",
@@ -57,6 +66,7 @@ const styles = theme => ({
     height:"78%",
     border:"4px solid #25274d",
     borderRadius:"16px",
+
     "& h3":{
       width:"100%",
       textAlign:"center",
@@ -121,7 +131,10 @@ class ProjectDialog extends React.Component {
                       </div>
                     ))}
                   </Carousel>
-                  <div className={classes.stackContainer}>
+                 
+                  <p className={classes.desc}>{details.description}</p>
+                </div>
+                <div className={classes.stackContainer}>
                     <h3>Tech Stack</h3>
                     {details.stack.map((icon,i)=>(
                       <StackIcon key={i} icon={icon} className={classes.icon} />
@@ -131,14 +144,12 @@ class ProjectDialog extends React.Component {
                         Git Repo
                         <GitIcon />
                       </Button>
-                      <Button variant="contained" color="primary" className={classes.button}>
+                      <Button variant="contained" color="secondary" className={classes.button}>
                         Live demo
-                        <GitIcon />
+                        <WebRounded />
                       </Button>
                     </div>
                   </div>
-                  <p>{details.description}</p>
-                </div>
                 
                 
 
