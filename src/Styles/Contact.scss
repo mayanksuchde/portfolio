@@ -5,9 +5,13 @@
     @include fillScreen();
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
-   
+    @media (max-width: $mobile) {
+        h2{
+            margin-bottom: 12px;
+        }
+    }
     .content{
       display: flex;
       flex-direction: row;
@@ -33,6 +37,10 @@
           text-align: left;
           justify-content: space-between;
           margin-bottom: 24px;
+          @media (max-width: $mobile) {
+            flex-direction: column;
+            margin-bottom: 12px;
+        }
           input{
             width: 70%;
             height: 40px;
@@ -40,6 +48,9 @@
             border-radius: 5px;
             border:none;
             padding-left: 16px;
+            @media (max-width: $mobile) {
+                width: 90%;
+            }
           }
           textarea{
             padding-left: 16px;
@@ -48,6 +59,9 @@
             height:20vh;
             width: 70%;
             border-radius: 5px;
+            @media (max-width: $mobile) {
+                width: 90%;
+            }
           }
   
         }
@@ -60,10 +74,10 @@
           border:none;
           color: #25274d;
           font-family: "Fira Code";
-          font-weight: medium;
+          font-weight: 300;
           font-size: 24px;
           @media (max-width: $mobile) {
-            width: 90%;
+            width: 100%;
             margin: auto;
             
         }
@@ -98,6 +112,7 @@
         @media (max-width: $mobile) {
             width: 100%;
             font-size: 24px;
+            font-weight: 300;
             margin: 12px auto;
             max-width: 350px;
         }

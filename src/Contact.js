@@ -14,6 +14,7 @@ export default class Contact extends Component {
       name: "",
       email:"",
       message:"",
+      subject:"",
       sent:false,
       buttonText:"Send Message"
     }
@@ -27,6 +28,7 @@ export default class Contact extends Component {
     let data = {
         name: this.state.name,
         email: this.state.email,
+        subject:this.state.subject,
         message: this.state.message
     }
     
@@ -41,9 +43,9 @@ export default class Contact extends Component {
   resetForm=()=>{
     this.setState({
       name: '',
-      message: '',
       email: '',
       subject:'',
+      message: '',
       buttonText: 'Message Sent'
     })
   }
@@ -65,7 +67,7 @@ export default class Contact extends Component {
               <input onChange={e=>this.setState({subject:e.target.value})} type="text" placeholder="Subject" name="subject" value={this.state.subject} />
             </label>
             <label htmlFor="message">Message:
-              <textarea onChange={e=>this.setState({message:e.target.message})} name="subject" placeholder="Enter your message">
+              <textarea onChange={e=>this.setState({message:e.target.message})} name="subject" placeholder="Enter your message" value={this.state.message} >
               </textarea>
             </label> 
             <input type="submit"  value={this.state.buttonText}/>
