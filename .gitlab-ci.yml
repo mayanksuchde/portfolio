@@ -28,3 +28,7 @@ deployToAWS:
   script:
     - npm run build
     - bash deploy/deploy.sh
+
+
+
+  

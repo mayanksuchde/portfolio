@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {ReactComponent as DownloadIcon} from './assets/download.svg';
 import resume from './assets/resume.pdf';
 import {OpenInNewRounded} from '@material-ui/icons'
 import axios from 'axios';
