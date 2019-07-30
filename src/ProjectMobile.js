@@ -54,7 +54,7 @@ const ExpansionPanel = withStyles({
     root: {
       backgroundImage:"linear-gradient(to right,#757ab8, #919db6)" ,
       padding: theme.spacing(2),
-      maxHeight:"40vh",
+      maxHeight:"60vh",
       overflow:"scroll",
       display:"flex",
       flexDirection:"column"
@@ -68,7 +68,7 @@ const ExpansionPanel = withStyles({
         height:"48px",
         alignItems:"center",
         fontSize:"10px",
-        margin:"0 4px",
+        margin:"8px 4px",
         justifyContent:"space-around",
         "& svg":{
             height:"36px",

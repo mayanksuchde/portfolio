@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ReactComponent as GitLink } from './assets/social/github.svg'
 import { ReactComponent as LinkedIn } from './assets/social/linkedin.svg'
 import './Styles/Home.scss'; 
+import {ArrowDownwardRounded} from '@material-ui/icons';
 export default class Home extends Component {
   render() {
     return (
@@ -19,6 +20,10 @@ export default class Home extends Component {
           <a href="https://www.linkedin.com/in/mayank-suchade/" rel="noopener noreferrer" target="_blank">
             <LinkedIn  />
           </a>
+        </div>
+        <div className="DownDiv" href="About">
+          <span>Click Here</span>
+          <ArrowDownwardRounded fontSize='inherit' />
         </div>
       </div>
     )

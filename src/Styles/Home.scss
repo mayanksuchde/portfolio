@@ -55,4 +55,17 @@
         }
         
     }
+    .DownDiv{
+      justify-self: flex-end;
+      padding-bottom:auto;
+      font-size: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      span{
+        font-size: 14px;
+        font-weight: 200;
+      }
+    }
   }

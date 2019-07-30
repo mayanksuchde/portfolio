@@ -31,7 +31,7 @@ export default class Contact extends Component {
         message: this.state.message
     }
     
-    axios.post('http://localhost:8080/api/mail', data)
+    axios.post('http://portfoliobackend-env-1.6h3mh3zpgm.us-east-2.elasticbeanstalk.com//api/mail', data)
     .then( res => {
         this.setState({ sent: true }, this.resetForm())
     })
