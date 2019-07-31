@@ -31,7 +31,7 @@ export default class Contact extends Component {
         message: this.state.message
     }
     
-    axios.post('http://portfoliobackend-env-1.6h3mh3zpgm.us-east-2.elasticbeanstalk.com//api/mail', data)
+    axios.post('http://3.15.151.86:8080/api/mail', data)
     .then( res => {
         this.setState({ sent: true }, this.resetForm())
     })
@@ -66,7 +66,7 @@ export default class Contact extends Component {
               <input onChange={e=>this.setState({subject:e.target.value})} type="text" placeholder="Subject" name="subject" value={this.state.subject} />
             </label>
             <label htmlFor="message">Message:
-              <textarea onChange={e=>this.setState({message:e.target.message})} name="subject" placeholder="Enter your message" value={this.state.message} >
+              <textarea onChange={e=>this.setState({message:e.target.value})} name="subject" placeholder="Enter your message" value={this.state.message} >
               </textarea>
             </label> 
             <input type="submit"  value={this.state.buttonText}/>
