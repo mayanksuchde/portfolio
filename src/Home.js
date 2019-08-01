@@ -21,10 +21,10 @@ export default class Home extends Component {
             <LinkedIn  />
           </a>
         </div>
-        <div className="DownDiv" href="About">
-          <span>Click Here</span>
+        {/* <div className="DownDiv" href="About">
+          <span>Scroll Down</span>
           <ArrowDownwardRounded fontSize='inherit' />
-        </div>
+        </div> */}
       </div>
     )
   }

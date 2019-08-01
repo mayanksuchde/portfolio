@@ -31,7 +31,7 @@ export default class Contact extends Component {
         message: this.state.message
     }
     
-    axios.post('http://3.15.151.86:8080/api/mail', data)
+    axios.post('http://acme.mayank-suchade.com:8080/api/mail', data)
     .then( res => {
         this.setState({ sent: true }, this.resetForm())
     })

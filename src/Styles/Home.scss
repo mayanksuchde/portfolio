@@ -9,7 +9,7 @@
     align-items: center;
     h1{
       font-size: 60px;
-      width:"auto";
+      width:100%;
       @media (max-width:$tablet) {
             font-size: 45px;
         }
@@ -56,13 +56,18 @@
         
     }
     .DownDiv{
-      justify-self: flex-end;
-      padding-bottom:auto;
+      padding-top: 9%;
+      max-height: 70px;
       font-size: 48px;
       display: flex;
       flex-direction: column;
+      color: $lightBlue;
+
       justify-content: flex-end;
       align-items: center;
+      @media (max-width:$tablet) {
+        padding-top: 18%;
+      }
       span{
         font-size: 14px;
         font-weight: 200;
