@@ -5,7 +5,7 @@ export default function StackList({stack}){
     return(
         <div className="StackList" >
             {stack.map((s)=>(
-                <img src={s.icon} alt={s.name} />
+                <img key={s.name} src={s.icon} alt={s.name} />
             ))}
         </div>
     )

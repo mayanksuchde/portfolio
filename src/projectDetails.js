@@ -1,9 +1,18 @@
 import warbImg from './assets/projects/warbler-1.jpg';
+import portfolio1 from './assets/projects/portfolio.png';
+import portfolio2 from './assets/projects/portfolio2.png';
+import portfolio3 from './assets/projects/portfolio3.png';
+import reactColors from './assets/projects/reactColors.png';
+import reactColors2 from './assets/projects/reactColors2.png';
+import reactColors3 from './assets/projects/reactColors3.png';
+import reactColors4 from './assets/projects/reactColors4.png';
+
 import planImg from './assets/projects/plan-react-app.jpg';
 import rgbImg from './assets/projects/rgb-game.jpg';
 import mongoSVG from "./assets/backend/mongo.svg";
 import expressSVG from "./assets/backend/express.svg";
 import nodeSVG from "./assets/backend/nodejs.svg";
+import amplifySVG from './assets/othertools/awsAmplify.svg'
 // import mySqlSVG from "./assets/backend/mysql.svg";
 import reactSVG from './assets/frontend/react.svg'
 import reduxSVG from './assets/frontend/redux.svg';
@@ -13,18 +22,18 @@ import ScssSVG from './assets/frontend/scss.svg';
 
 export default [
     {
-        name:"Warbler",
+        name:"Portfolio",
         shortDesc:"twitter clone",
-        description:"It is a mini version of twitter where a User can start posting messages upto 280 characters.Anim incididunt qui dolore qui nisi sit pariatur veniam Lorem deserunt laboris in voluptate. Cupidatat reprehenderit labore dolor mollit commodo velit nostrud sint dolor Lorem laboris officia. Sunt culpa exercitation aliqua Lorem et ipsum proident irure non tempor id minim dolore. Ipsum quis esse pariatur pariatur laboris laboris est sunt sit. Ipsum aliqua est adipisicing anim elit amet ipsum anim laborum et excepteur magna anim qui.",
-        stack:[{name:"React",icon:reactSVG},{name:"Redux",icon:reduxSVG},{name:"Node.js",icon:nodeSVG},{name:"Express",icon:expressSVG},{name:"MongoDB",icon:mongoSVG}],
+        description:"This Portfolio worked as sort of my digital canvas so I have added and removed many npm libraries to make this site beautiful and responsive.\nThe beautiful Parallax background was created using a react animation library called React Spring. Material UI is another major library which allowed me to reuse their predefined components which reduced the production time. The Node mailer library helped me with developing the mailing system, where any message sent from the form on portfolio is directly sent my email address.\n   - Front-end - React and Material UI\n   - Backend - Node.js, Express and nodemailer \n   - Deploy - AWS Amplify and Route 53",
+        stack:[{name:"React",icon:reactSVG},{name:"Node.js",icon:nodeSVG},{name:"Express",icon:expressSVG},{name:"AWS amplify",icon:amplifySVG}],
         gitLink:"https://github.com/mayanksuchde/warbler",
         liveDemo:"",
-        screenshot:[warbImg]
+        screenshot:[portfolio1,portfolio2,portfolio3]
       },
       {
         name:"plan-react-app",
         shortDesc:"twitter clone",
-        description:"Plan react app is a tool for React developers to plan their component hierarchy before they even begin coding In this app a user can start creating a Tree for React Components. This helps with the planning process and allow the user to manage the entire state of the app. User is given with the main App Component node where you can start adding props, state and its child components from the tool box. User can also drag and drop state and props from parent to its child component in the toolbox. If user wants to grow his app they can select a particular node on the tree and start adding children.This app uses React and D3.js and Node,Mongo and Express on the backend",
+        description:"Plan react app is a tool for React developers to plan their component hierarchy before they even begin coding In this app a user can start creating a Tree for React Components. This helps with the planning process and allow the user to manage the entire state of the app.\n User is given with the main App Component node where you can start adding props, state and its child components from the tool box. User can also drag and drop state and props from parent to its child component in the toolbox. If user wants to grow his app they can select a particular node on the tree and start adding children.\n   - Front End - React and D3.js\n   - Back End - Node,Mongo and Express",
         stack:[{name:"React",icon:reactSVG},{name:"D3.js",icon:d3SVG},{name:"Node.js",icon:nodeSVG},{name:"SCSS",icon:ScssSVG}],
         gitLink:"https://github.com/mayanksuchde/plan-react-app",
         liveDemo:"",
@@ -33,10 +42,10 @@ export default [
       {
         name:"Colors App",
         shortDesc:"Clone of Material UI Colors",
-        description:"orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets ",
+        description:"This app is a clone of Flat UI Color which allows designers to explore some colors for the projects.",
         stack:[{name:"React",icon:reactSVG},{name:"Material UI",icon:materialSVG}],
         gitLink:"https://github.com/mayanksuchde/colors-app",
         liveDemo:"",
-        screenshot:[rgbImg]
+        screenshot:[reactColors,reactColors2,reactColors3,reactColors4]
       }
     ]

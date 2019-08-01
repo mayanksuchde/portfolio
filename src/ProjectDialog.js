@@ -22,6 +22,7 @@ const styles = theme => ({
   
   title:{
     marginLeft:"2%",
+    marginTop:"2%",
     color:"#241864",
     marginBottom:"0",
   },
@@ -96,6 +97,9 @@ class ProjectDialog extends React.Component {
 
   render() {
       const {details,classes}=this.props;
+      let description = details.description.split('\n').map((item, i) => {
+        return <p  key={i}>{item}</p>;
+    });
     return (
       <div>
         <IconButton variant="outlined" color="primary" onClick={this.handleClickOpen}>
@@ -126,13 +130,15 @@ class ProjectDialog extends React.Component {
                     showThumbs={false}
                     swipeable={true} >
                     {details.screenshot.map((pic,i)=>(
-                      <div>
-                        <img key={i} className={classes.image} src={pic} alt="Screenshot"/>  
+                      <div key={pic}>
+                        <img  className={classes.image} src={pic} alt="Screenshot"/>  
                       </div>
                     ))}
                   </Carousel>
-                 
-                  <p className={classes.desc}>{details.description}</p>
+                  <div className={classes.desc}>
+                    {description}
+                  </div>
+                  {/* <p className={classes.desc}>{details.description}</p> */}
                 </div>
                 <div className={classes.stackContainer}>
                     <h3>Tech Stack</h3>
@@ -144,10 +150,11 @@ class ProjectDialog extends React.Component {
                         Git Repo
                         <GitIcon />
                       </Button>
-                      <Button variant="contained" color="secondary" className={classes.button}>
+                      {(details.liveDemo!=="")?<Button variant="contained" color="secondary" className={classes.button}>
                         Live demo
                         <WebRounded />
-                      </Button>
+                      </Button> : ""}
+                      
                     </div>
                   </div>
                 

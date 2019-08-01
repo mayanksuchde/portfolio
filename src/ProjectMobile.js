@@ -7,6 +7,7 @@ import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import StackList from './StackList'
 import Button from '@material-ui/core/Button';
+import MobileCarousel from './MobileCarousel';
 import {ReactComponent as GitIcon} from './assets/othertools/github.svg';
 import './Styles/Project.scss';
 
@@ -90,8 +91,9 @@ export default function ProjectMobile({list}) {
                     <h3>{proj.name}</h3>
                     
                  </ExpansionPanelSummary>
+
                  <ExpansionPanelDetails>
-                    
+                  <MobileCarousel screenshots={proj.screenshot} />   
                    <p>{proj.description}</p>
                     {/* 1 button for github and one for live code.(if live code is not empty only then ...) */}
                     <StackList stack={proj.stack} />
@@ -100,10 +102,10 @@ export default function ProjectMobile({list}) {
                         Git Repo
                         <GitIcon />
                       </Button>
-                      <Button variant="contained" color="secondary" >
+                      {(proj.liveDemo!=="")?<Button variant="contained" color="secondary" className={classes.button}>
                         Live demo
                         <WebRounded />
-                      </Button>
+                      </Button> : ""}
                     </div>
                     
                  </ExpansionPanelDetails>

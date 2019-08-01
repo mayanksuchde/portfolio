@@ -11,7 +11,7 @@ export default class Home extends Component {
         <div className="subheaders">
           <h4>Full Stack developer</h4>
           <h4>Lifetime Learner</h4>
-          <h4>Coffe Drinker</h4>
+          <h4>Coffee Drinker</h4>
         </div>
         <div className="socials">
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/mayanksuchde">
