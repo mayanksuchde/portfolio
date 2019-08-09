@@ -26,7 +26,7 @@ export default [
         shortDesc:"twitter clone",
         description:"This Portfolio worked as sort of my digital canvas so I have added and removed many npm libraries to make this site beautiful and responsive.\nThe beautiful Parallax background was created using a react animation library called React Spring. Material UI is another major library which allowed me to reuse their predefined components which reduced the production time. The Node mailer library helped me with developing the mailing system, where any message sent from the form on portfolio is directly sent my email address.\n   - Front-end - React and Material UI\n   - Backend - Node.js, Express and nodemailer \n   - Deploy - AWS Amplify and Route 53",
         stack:[{name:"React",icon:reactSVG},{name:"Node.js",icon:nodeSVG},{name:"Express",icon:expressSVG},{name:"AWS amplify",icon:amplifySVG}],
-        gitLink:"https://github.com/mayanksuchde/warbler",
+        gitLink:"https://github.com/mayanksuchde/portfolio",
         liveDemo:"",
         screenshot:[portfolio1,portfolio2,portfolio3]
       },
