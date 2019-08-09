@@ -98,11 +98,11 @@ export default function ProjectMobile({list}) {
                     {/* 1 button for github and one for live code.(if live code is not empty only then ...) */}
                     <StackList stack={proj.stack} />
                     <div className={classes.buttons}>
-                      <Button variant="contained" color="primary" >
+                      <Button variant="contained" color="primary" target="_blank" href={proj.gitLink} >
                         Git Repo
                         <GitIcon />
                       </Button>
-                      {(proj.liveDemo!=="")?<Button variant="contained" color="secondary" className={classes.button}>
+                      {(proj.liveDemo!=="")?<Button variant="contained" color="secondary" href={proj.liveDemo} target="_blank" className={classes.button}>
                         Live demo
                         <WebRounded />
                       </Button> : ""}

@@ -42,10 +42,10 @@ export default [
       {
         name:"Colors App",
         shortDesc:"Clone of Material UI Colors",
-        description:"This app is a clone of Flat UI Color which allows designers to explore some colors for the projects.",
+        description:"This is a great tool for designers and developers to explore different colors for their projects. You can see list of predefined palettes and one-click on a single color to copies the color value to your clipboard. You can even select between HEX RGB and RGBA. You can also create your own palette and select and save a set of color which will be can be saved and can later be used for reference.",
         stack:[{name:"React",icon:reactSVG},{name:"Material UI",icon:materialSVG}],
         gitLink:"https://github.com/mayanksuchde/colors-app",
-        liveDemo:"",
+        liveDemo:"https://master.d34pf6efnij2f2.amplifyapp.com/",
         screenshot:[reactColors,reactColors2,reactColors3,reactColors4]
       }
     ]

@@ -146,11 +146,11 @@ class ProjectDialog extends React.Component {
                       <StackIcon key={i} icon={icon} className={classes.icon} />
                     ))}
                     <div className={classes.buttons}>
-                      <Button variant="contained" color="primary" className={classes.button}>
+                      <Button variant="contained" color="primary" target="_blank" href={details.gitLink} className={classes.button}>
                         Git Repo
                         <GitIcon />
                       </Button>
-                      {(details.liveDemo!=="")?<Button variant="contained" color="secondary" className={classes.button}>
+                      {(details.liveDemo!=="")?<Button variant="contained" color="secondary" target="_blank" href={details.liveDemo} className={classes.button}>
                         Live demo
                         <WebRounded />
                       </Button> : ""}
