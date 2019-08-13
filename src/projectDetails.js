@@ -23,7 +23,7 @@ import ScssSVG from './assets/frontend/scss.svg';
 export default [
     {
         name:"Portfolio",
-        shortDesc:"twitter clone",
+        shortDesc:"",
         description:"This Portfolio worked as sort of my digital canvas so I have added and removed many npm libraries to make this site beautiful and responsive.\nThe beautiful Parallax background was created using a react animation library called React Spring. Material UI is another major library which allowed me to reuse their predefined components which reduced the production time. The Node mailer library helped me with developing the mailing system, where any message sent from the form on portfolio is directly sent my email address.\n   - Front-end - React and Material UI\n   - Backend - Node.js, Express and nodemailer \n   - Deploy - AWS Amplify and Route 53",
         stack:[{name:"React",icon:reactSVG},{name:"Node.js",icon:nodeSVG},{name:"Express",icon:expressSVG},{name:"AWS amplify",icon:amplifySVG}],
         gitLink:"https://github.com/mayanksuchde/portfolio",
@@ -32,7 +32,7 @@ export default [
       },
       {
         name:"plan-react-app",
-        shortDesc:"twitter clone",
+        shortDesc:"Component Hierarchy Planner",
         description:"Plan react app is a tool for React developers to plan their component hierarchy before they even begin coding In this app a user can start creating a Tree for React Components. This helps with the planning process and allow the user to manage the entire state of the app.\n User is given with the main App Component node where you can start adding props, state and its child components from the tool box. User can also drag and drop state and props from parent to its child component in the toolbox. If user wants to grow his app they can select a particular node on the tree and start adding children.\n   - Front End - React and D3.js\n   - Back End - Node,Mongo and Express",
         stack:[{name:"React",icon:reactSVG},{name:"D3.js",icon:d3SVG},{name:"Node.js",icon:nodeSVG},{name:"SCSS",icon:ScssSVG}],
         gitLink:"https://github.com/mayanksuchde/plan-react-app",
