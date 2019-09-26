@@ -16,7 +16,7 @@ class App extends Component {
    
     return (
         <div className="App">
-          <Parallax className='parallax' pages={5} >
+          <Parallax native className='parallax' pages={5} >
             <ParallaxLayer offset={0} speed={0.1}>
               <SmallSq />
             </ParallaxLayer>
