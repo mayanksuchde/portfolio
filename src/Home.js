@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import { ReactComponent as GitLink } from './assets/social/github.svg'
 import { ReactComponent as LinkedIn } from './assets/social/linkedin.svg'
+import {Spring,config} from 'react-spring/renderprops'
+
 import './Styles/Home.scss'; 
 import {ArrowDownwardRounded} from '@material-ui/icons';
 export default class Home extends Component {
   render() {
     return (
       <div className='home'>
-        <h1>Mayank Suchade</h1>
+        <Spring
+          from={{opacity:0}}
+          to={{opacity:1}}
+          config={config.slow}
+          delay
+        >
+          {props=><h1 style={props}>Mayank Suchade</h1>}
+        </Spring>
+        
         <div className="subheaders">
           <h4>Full Stack developer</h4>
           <h4>Lifetime Learner</h4>

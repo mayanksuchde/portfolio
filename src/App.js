@@ -16,7 +16,7 @@ class App extends Component {
    
     return (
         <div className="App">
-          <Parallax native className='parallax' pages={5} >
+          {/* <Parallax native className='parallax' pages={5} >
             <ParallaxLayer offset={0} speed={0.1}>
               <SmallSq />
             </ParallaxLayer>
@@ -25,8 +25,19 @@ class App extends Component {
             </ParallaxLayer>
             <ParallaxLayer offset={0} speed={1}>
               <LargeSq />
-            </ParallaxLayer>  
-            
+            </ParallaxLayer>   */}
+            <div className="overflow perspective">
+              <div className="preserve container">
+                <div className="parallax p1">
+                  <LargeSq  />
+                </div>
+                <div className="parallax p2">
+                  <MedSq />
+                </div>
+                <div className="parallax p3">
+                  <SmallSq />
+                </div>
+              
             <div className='main'>
               <Home  />
               <About />
@@ -34,7 +45,9 @@ class App extends Component {
               <ProjectList />
               <Contact />
             </div>
-          </Parallax>
+          {/* </Parallax> */}
+          </div>
+          </div>
         </div>
     );
   }
