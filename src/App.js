@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+//import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 import Home from './Home';
 import About from './About';
 import Skills from './Skills';
