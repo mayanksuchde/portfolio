@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 //import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+import Rellax from 'rellax';
 import Home from './Home';
 import About from './About';
 import Skills from './Skills';
@@ -12,42 +13,35 @@ import './Styles/App.scss';
 
 
 class App extends Component {
+  componentDidMount=()=>{
+    var rellax = new Rellax('.rellax');
+  }
   render() {
    
     return (
         <div className="App">
-          {/* <Parallax native className='parallax' pages={5} >
-            <ParallaxLayer offset={0} speed={0.1}>
+          <div className="bg">
+            <div className="parallax p1 rellax" data-rellax-speed="30">
               <SmallSq />
-            </ParallaxLayer>
-            <ParallaxLayer offset={0} speed={0.5}>
-              <MedSq />
-            </ParallaxLayer>
-            <ParallaxLayer offset={0} speed={1}>
-              <LargeSq />
-            </ParallaxLayer>   */}
-            <div className="overflow perspective">
-              <div className="preserve container">
-                <div className="parallax p1">
-                  <LargeSq  />
-                </div>
-                <div className="parallax p2">
-                  <MedSq />
-                </div>
-                <div className="parallax p3">
-                  <SmallSq />
-                </div>
-              
-            <div className='main'>
-              <Home  />
-              <About />
-              <Skills />
-              <ProjectList />
-              <Contact />
             </div>
+            <div className="parallax p2 rellax" data-rellax-speed="20">
+              <MedSq />
+            </div>
+            <div className="parallax p3 rellax" data-rellax-speed="10">
+              <LargeSq />
+            </div>
+          </div>
+              
+          <div className='main'>
+            <Home  />
+            <About />
+            <Skills />
+            <ProjectList />
+            <Contact />
+          </div>
           {/* </Parallax> */}
-          </div>
-          </div>
+          
+          
         </div>
     );
   }

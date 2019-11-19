@@ -61,48 +61,63 @@ body{
 //     }
 //   }
 // }
-.overflow {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: available;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
-  scroll-behavior: smooth;
-}
+// .overflow {
+//   overflow-y: scroll;
+//   overflow-x: hidden;
+//   height: 100%;
+//   -webkit-overflow-scrolling: touch;
+//   width: 100%;
+//   scroll-behavior: smooth;
+// }
 
-.perspective {
-  perspective: 1px;
-  perspective-origin: top left;
-}
+// .perspective {
+//   perspective: 1px;
+//   perspective-origin: top left;
+// }
 
-.preserve {
-  transform-style: preserve-3d;
-}
+// .preserve {
+//   transform-style: preserve-3d;
+// }
 
-.parallax {
-  position: absolute;
-  margin: auto;
-  svg{
-    width:180%;
-    @media (max-width:$mobile) {
-      width:300vh;
-    }
-  }
+// .parallax {
+//   position: absolute;
+//   width:100%;
+//   height:fill;
+//   margin: auto;
+//   svg{
+//     width:180%;
+//     height: 110%;
+//     @media (max-width:$mobile) {
+//       width:300vh;
+//     }
+//   }
   // top: 200px;
   // margin-left: 250px;
   // font-size: 24px;
+//}
+// .p1{
+//   transform: translateZ(-1.4px);
+// }
+// .p2{
+  
+//   transform: translateZ(-0.7px);
+// }
+// .p3{
+  
+//   transform: translateZ(-0.2px);
+// }
+
+.bg{
+  width: 100%;
+  height:100%;
 }
-.p1{
-  transform: translateZ(-0.2px);
-  //transform:scale(1.1);
-}
-.p2{
-  transform:scale(1);
-  transform: translateZ(-0.7px);
-}
-.p3{
-  transform:scale(2);
-  transform: translateZ(-1.4px);
+.parallax{
+  position: absolute;
+  top: 0;
+  left: 0;
+  svg{
+    width:100%;
+  }
 }
 
 .main{
