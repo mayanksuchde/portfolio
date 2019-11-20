@@ -41,6 +41,7 @@ class App extends Component {
                     <Background top={0} />
                     <Background top={1} />
                     <Background top={2} />
+                    <Background top={3} />
                   </div>
                 ) 
                 : 
