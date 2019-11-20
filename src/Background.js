@@ -11,7 +11,7 @@ export default class Background extends Component {
     render() {
         const {top}=this.props;
         return (
-            <div className="background"  style={{top:`${1000 * top}px`}}>
+            <div className="background"  style={{top:`${1300 * top}px`}}>
                 <div className="parallax p1 rellax" data-rellax-speed="30">
                     <SmallSq />
                 </div>
@@ -21,7 +21,6 @@ export default class Background extends Component {
                 <div className="parallax p3 rellax" data-rellax-speed="10">
                     <LargeSq />
                 </div>
-          
             </div>
         )
     }
