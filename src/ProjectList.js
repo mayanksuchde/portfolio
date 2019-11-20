@@ -8,7 +8,6 @@ export default class ProjectList extends Component {
   
   state = {
     isMobile: false,
-  
   }
 
   

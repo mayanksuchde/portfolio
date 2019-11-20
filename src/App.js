@@ -14,7 +14,7 @@ import './Styles/App.scss';
 class App extends Component {
   state = {
     isMobile: false,
-  
+    isScreen:"",
   }
 
   
@@ -24,30 +24,44 @@ class App extends Component {
   }
   resize() {
     this.setState({isMobile:window.innerWidth<525});
+    if(window.innerWidth<525){
+      this.setState({isScreen:"mobile"})
+    }else if(window.innerWidth<800){
+      this.setState({isScreen:"tablet"})
+    }else{
+      this.setState({isScreen:"desktop"})
+    }
   }
 
 
   componentWillUnmount=()=>{
     window.removeEventListener('resize', this.throttledHandleWindowResize);
   }
+  
+
   render() {
-   const {isMobile}=this.state;
+   const {isScreen}=this.state;
+   let responsiveBg="";
+    if(isScreen==="mobile"){
+      responsiveBg=<div>
+          <Background top={0} />
+          <Background top={1} />
+          <Background top={2} />
+          <Background top={3} />
+        </div>
+    }else if(isScreen==="tablet"){
+      responsiveBg=<div>
+          <Background top={0} />
+          <Background top={1} />
+          <Background top={1.4} />
+          </div>
+    }else if(isScreen==="desktop"){
+      responsiveBg=<Background top={0} />
+    }
     return (
         <div className="App">
           <div className="bg">
-            { isMobile ? 
-                (
-                  <div>
-                    <Background top={0} />
-                    <Background top={1} />
-                    <Background top={2} />
-                    <Background top={3} />
-                  </div>
-                ) 
-                : 
-                (<Background top={0} />) }
-             
-            {/* may be try to put the top padding as a props so we can use it multiple times     */}
+            {responsiveBg}
             <div className='main'>
               <Home  />
               <About />

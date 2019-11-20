@@ -91,7 +91,6 @@ export default function ProjectMobile({list}) {
             <ExpansionPanel key={index} square expanded={expanded === `panel${index+1}`} onChange={handleChange(`panel${index+1}`)}>
                  <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
                     <h3>{proj.name}</h3>
-                    
                  </ExpansionPanelSummary>
 
                  <ExpansionPanelDetails>
