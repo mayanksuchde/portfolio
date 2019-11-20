@@ -36,12 +36,14 @@ const ExpansionPanel = withStyles({
     backgroundImage:"linear-gradient(to right,#B256D5, #4E4EA2)" ,
       borderBottom: '1px solid rgba(0, 0, 0, .125)',
       marginBottom: -1,
-      height:56,
+      height:48,
       minHeight: 26,
       '&$expanded': {
         minHeight: 26,
-      
       },
+      "& h3":{
+        margin:"8px 0"
+      }
     },
     content: {
       '&$expanded': {
@@ -54,11 +56,11 @@ const ExpansionPanel = withStyles({
   const ExpansionPanelDetails = withStyles(theme => ({
     root: {
       backgroundImage:"linear-gradient(to right,#757ab8, #919db6)" ,
-      padding: theme.spacing(2),
-      maxHeight:"60vh",
+      padding: theme.spacing(1),
+      maxHeight:"56vh",
       overflow:"scroll",
       display:"flex",
-      flexDirection:"column"
+      flexDirection:"column",
     },
   }))(MuiExpansionPanelDetails);
   
