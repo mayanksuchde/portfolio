@@ -40,7 +40,7 @@ class App extends Component {
   
 
   render() {
-   const {isMobile,isScreen}=this.state;
+   const {isScreen}=this.state;
    let responsiveBg="";
     if(isScreen==="mobile"){
       responsiveBg=<div>
