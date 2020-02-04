@@ -12,7 +12,7 @@ export default class Home extends Component {
         <Spring
           from={{opacity:0}}
           to={{opacity:1}}
-          config={config.slow}
+          config={config.wobbly}
           delay
         >
           {props=><h1 style={props}>Mayank Suchade</h1>}
