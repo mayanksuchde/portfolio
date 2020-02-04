@@ -8,7 +8,6 @@ export default class ProjectList extends Component {
   
   state = {
     isMobile: false,
-  
   }
 
   
@@ -35,11 +34,8 @@ export default class ProjectList extends Component {
             :
               <ul>
                 {projArr.map((p,i)=><li key={i}><Project details={p} /></li>)}
-              </ul>
-            
+              </ul>   
         }
-        
-        {/* <ProjectMobile /> */}
       </div>
     )
   }
