@@ -199,12 +199,12 @@ h2{
       top: 0;
       left: 0;
       // svg{
-      //   position: relative;
+      //   position: relative;    *** this is svg made by D3***
       //   top:-125px;
       //   left: 0;
       // }
       img{
-        // position: relative;
+        // position: relative;   *** these two lines will align the profile pic at center of the doughnut***
         // top:206px;
         left: 0;
         border-radius:50%;
