@@ -3,7 +3,7 @@ import './Styles/Project.scss';
 import {LayersRounded} from '@material-ui/icons/';
 import { IconButton } from '@material-ui/core';
 import ProjectDialog from './ProjectDialog';
-import GitIcon from './GitIcon';
+import {ReactComponent as GitIcon} from './assets/othertools/github.svg';
 
 
 export default function Project({details}){

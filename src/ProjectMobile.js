@@ -102,7 +102,7 @@ export default function ProjectMobile({list}) {
                     <StackList stack={proj.stack} />
                     <div className={classes.buttons}>
                       <Button variant="contained" color="primary" target="_blank" href={proj.gitLink} >
-                        Git Repo
+                        Git Repo 
                         <GitIcon />
                       </Button>
                       {(proj.liveDemo!=="")?<Button variant="contained" color="secondary" href={proj.liveDemo} target="_blank" className={classes.button}>

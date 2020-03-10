@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import StackIcon from './StackIcon';
 import {FullscreenRounded,WebRounded} from '@material-ui/icons/';
 import { IconButton } from '@material-ui/core';
-import GitIcon from './GitIcon';
+import {ReactComponent as GitIcon} from './assets/othertools/github.svg';
 const styles = theme => ({
   root: {
     margin: theme.spacing(3)
@@ -73,6 +73,12 @@ const styles = theme => ({
       textAlign:"center",
       margin:"12px auto"
     },
+  },
+  buttons:{
+    "& svg":{
+      height:"24px",
+      padding:theme.spacing(1)
+    }
   },
   icon: {
     margin: theme.spacing(3),
