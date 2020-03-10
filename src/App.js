@@ -74,9 +74,6 @@ class App extends Component {
               <Contact />
             </div>
           </div>
-          {/* </Parallax> */}
-          
-          
         </div>
     );
   }
