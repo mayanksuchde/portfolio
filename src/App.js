@@ -13,13 +13,9 @@ class App extends Component {
   state = {
     isMobile: false,
     isScreen:"",
-    // loading:false,
   }
-  // demoAsyncCall() {
-  //   return new Promise((resolve) => setTimeout(() => resolve(), 2500));
-  // }  
+   
   componentDidMount=()=>{
-    //this.demoAsyncCall().then(() => this.setState({ loading: false }));
     window.addEventListener("resize", this.resize.bind(this));
     this.resize();
   }
@@ -42,9 +38,7 @@ class App extends Component {
 
   render() {
    const {isScreen}=this.state;
-  //  if(loading){
-  //    return null;
-  //  }
+ 
    let responsiveBg="";
     if(isScreen==="mobile"){
       responsiveBg=<div>
