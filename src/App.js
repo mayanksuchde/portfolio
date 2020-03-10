@@ -13,7 +13,7 @@ class App extends Component {
   state = {
     isMobile: false,
     isScreen:"",
-    loading:false,
+    // loading:false,
   }
   // demoAsyncCall() {
   //   return new Promise((resolve) => setTimeout(() => resolve(), 2500));
@@ -41,10 +41,10 @@ class App extends Component {
   
 
   render() {
-   const {isScreen,loading}=this.state;
-   if(loading){
-     return null;
-   }
+   const {isScreen}=this.state;
+  //  if(loading){
+  //    return null;
+  //  }
    let responsiveBg="";
     if(isScreen==="mobile"){
       responsiveBg=<div>
