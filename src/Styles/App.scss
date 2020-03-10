@@ -195,8 +195,18 @@ h2{
       
     }
     &__imgdiv{
-     
+      position: relative;
+      top: 0;
+      left: 0;
+      svg{
+        position: relative;
+        top:-125px;
+        left: 0;
+      }
       img{
+        position: relative;
+        top:206px;
+        left: 0;
         border-radius:50%;
         width: 200px;
         height:200px;

@@ -31,7 +31,7 @@ export default class About extends Component {
         .append('path')
         .attr('d',d3.arc()
                     .innerRadius(100) //Size of the doughnut hole
-                    .outerRadius(radius))
+                    .outerRadius(radius+20))
         .attr('fill',(d)=>{return color(d.data.key)})
         .attr("stroke","black")
         .style("stroke-width","2px")
@@ -44,8 +44,8 @@ export default class About extends Component {
         <h2>About</h2>
         <div className='about__content'>
             <p>I am a Full Stack Developer based in Toronto who is passionate about creative problem solving and creating beautiful and interactive web applications.My experience in solving customer queries and my drive to keep learning new technologies empowers me to create digital products that are user-friendly and responsive across all devices.</p>
-            <div className='about__content__imgdiv'>
-                <div id="pie"></div>
+            <div id="pie" className='about__content__imgdiv'>
+                {/* <div id="pie"></div> */}
                 <img src='./profile_pic.jpg' alt="Profile"/>
             </div>
         </div> 
