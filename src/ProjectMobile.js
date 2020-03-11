@@ -14,7 +14,7 @@ import './Styles/Project.scss';
 const ExpansionPanel = withStyles({
     root: {
       width:"90%",
-      background:"none",
+      
       margin:"auto",
       borderRadius:'5px',
       boxShadow: 'none',
@@ -38,7 +38,6 @@ const ExpansionPanel = withStyles({
       marginBottom: -1,
       height:48,
       minHeight: 26,
-      borderRadius:"6px",
       '&$expanded': {
         minHeight: 26,
       },
@@ -58,7 +57,6 @@ const ExpansionPanel = withStyles({
     root: {
       backgroundImage:"linear-gradient(to right,#757ab8, #919db6)" ,
       padding: theme.spacing(1),
-      margin:"-5px 0",
       maxHeight:"56vh",
       overflow:"scroll",
       display:"flex",
