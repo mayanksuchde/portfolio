@@ -1,5 +1,9 @@
-@import "./Variables.scss";
-@import './App.scss';
+@import "../Variables.scss";
+@import '../App.scss';
+
+.skills-container{
+  @include fillScreen()
+}
 
 .skills{
     display: flex;

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import resume from './assets/resume.pdf';
+import resume from '../assets/resume.pdf';
 import {OpenInNewRounded} from '@material-ui/icons'
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
 
-import './Styles/Contact.scss';
+import './Contact.scss';
 
 export default class Contact extends Component {
   constructor(props){

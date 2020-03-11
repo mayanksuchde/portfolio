@@ -1,5 +1,5 @@
 import React from 'react';
-import './Styles/Project.scss';
+import './Project.scss';
 
 export default function StackList({stack}){
     return(

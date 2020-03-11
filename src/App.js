@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Home from './Home';
+import Home from './Home/Home';
 import About from './About';
-import Skills from './Skills';
-import ProjectList from  './ProjectList';
-import Contact from './Contact';
+import Skills from './Skills/Skills';
+import ProjectList from  './Projects/ProjectList';
+import Contact from './Contact/Contact';
 import Background from './Background';
 
-import './Styles/App.scss';
+import './App.scss';
 
 
 class App extends Component {
@@ -16,6 +16,7 @@ class App extends Component {
   }
    
   componentDidMount=()=>{
+    //this.demoAsyncCall().then(() => this.setState({ loading: false }));
     window.addEventListener("resize", this.resize.bind(this));
     this.resize();
   }
@@ -38,7 +39,7 @@ class App extends Component {
 
   render() {
    const {isScreen}=this.state;
- 
+   
    let responsiveBg="";
     if(isScreen==="mobile"){
       responsiveBg=<div>
@@ -68,6 +69,9 @@ class App extends Component {
               <Contact />
             </div>
           </div>
+          {/* </Parallax> */}
+          
+          
         </div>
     );
   }

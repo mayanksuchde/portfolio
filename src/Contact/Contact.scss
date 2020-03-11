@@ -1,6 +1,4 @@
-@import './App.scss';
-@import "../assets/fira-font/stylesheet.css";
-
+@import "../App.scss";
 .contact{
     @include fillScreen();
     display: flex;
