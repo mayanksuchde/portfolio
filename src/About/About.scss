@@ -32,21 +32,21 @@
         position: relative;
         top: 0;
         left: 0;
-        // svg{
-        //   position: relative;    *** this is svg made by D3***
-        //   top:-125px;
-        //   left: 0;
-        // }
-        img{
-          // position: relative;   *** these two lines will align the profile pic at center of the doughnut***
-          // top:206px;
+        svg{
+          position: relative;    //*** this is svg made by D3***
+          top:68px;
           left: 0;
+        }
+        img{
+          position: relative;   //*** these two lines will align the profile pic at center of the doughnut***
+          top:-316px;
+         left: 0;
           border-radius:50%;
-          width: 240px;
-          height:240px;
+          width: 200px;
+          height:200px;
           @media(max-width: $laptop){
-            width: 240px;
-            height:240px;
+            width: 200px;
+            height:200px;
           }
           @media(max-width: $tablet){
             width: 150px;
