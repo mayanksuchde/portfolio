@@ -1,5 +1,4 @@
 @import "../App.scss";
-@import "../assets/fira-font/stylesheet.scss";
 .contact{
     @include fillScreen();
     display: flex;
@@ -43,7 +42,7 @@
           input{
             width: 70%;
             height: 40px;
-            // font-family: "Fira Code";
+            font-family: "Fira Code";
             border-radius: 5px;
             border:none;
             padding-left: 16px;
@@ -54,7 +53,7 @@
           textarea{
             padding-left: 16px;
             padding-top: 12px;
-            //font-family: "Fira Code";
+            font-family: "Fira Code";
             height:20vh;
             width: 70%;
             border-radius: 5px;
@@ -72,7 +71,7 @@
           background-color: #2e9cca;
           border:none;
           color: #25274d;
-          //font-family: "Fira Code";
+          font-family: "Fira Code";
           font-weight: 300;
           font-size: 24px;
           @media (max-width: $mobile) {
@@ -102,7 +101,7 @@
         background-color: #2e9cca;
         color:#25274d;
         border:none;
-        //font-family: "Fira Code";
+        font-family: "Fira Code";
         font-size: 16px;
         display: flex;
         justify-content: center;
