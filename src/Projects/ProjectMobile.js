@@ -8,8 +8,8 @@ import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import StackList from './StackList'
 import Button from '@material-ui/core/Button';
 import MobileCarousel from './MobileCarousel';
-import {ReactComponent as GitIcon} from './assets/othertools/github.svg';
-import './Styles/Project.scss';
+import {ReactComponent as GitIcon} from '../assets/othertools/github.svg';
+import './Project.scss';
 
 const ExpansionPanel = withStyles({
     root: {

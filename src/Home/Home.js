@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { ReactComponent as GitLink } from './assets/social/github.svg'
-import { ReactComponent as LinkedIn } from './assets/social/linkedin.svg'
+import { ReactComponent as GitLink } from '../assets/social/github.svg'
+import { ReactComponent as LinkedIn } from '../assets/social/linkedin.svg'
 import {Spring,config} from 'react-spring/renderprops'
-
-import './Styles/Home.scss'; 
+import './Home.scss'; 
 import {ArrowDownwardRounded} from '@material-ui/icons';
 export default class Home extends Component {
   render() {

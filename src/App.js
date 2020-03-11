@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
-import Home from './Home';
-import About from './About';
-import Skills from './Skills';
-import ProjectList from  './ProjectList';
-import Contact from './Contact';
+import Home from './Home/Home';
+import About from './About/About';
+import Skills from './Skills/Skills';
+import ProjectList from  './Projects/ProjectList';
+import Contact from './Contact/Contact';
 import Background from './Background';
 
-import './Styles/App.scss';
+import './App.scss';
 
 
 class App extends Component {
   state = {
     isMobile: false,
     isScreen:"",
-    loading:false,
   }
-  // demoAsyncCall() {
-  //   return new Promise((resolve) => setTimeout(() => resolve(), 2500));
-  // }  
+   
   componentDidMount=()=>{
     //this.demoAsyncCall().then(() => this.setState({ loading: false }));
     window.addEventListener("resize", this.resize.bind(this));
@@ -41,10 +38,8 @@ class App extends Component {
   
 
   render() {
-   const {isScreen,loading}=this.state;
-   if(loading){
-     return null;
-   }
+   const {isScreen}=this.state;
+   
    let responsiveBg="";
     if(isScreen==="mobile"){
       responsiveBg=<div>

@@ -1,20 +1,20 @@
 
-var reactImg = './assets/frontend/react.svg';
-var htmlImg = './assets/frontend/html.svg';
-var scssImg = './assets/frontend/scss.svg';
-var d3Img = './assets/frontend/d3.svg';
-var reduxImg = './assets/frontend/redux.svg';
+var reactImg = '../assets/frontend/react.svg';
+var htmlImg = '../assets/frontend/html.svg';
+var scssImg = '../assets/frontend/scss.svg';
+var d3Img = '../assets/frontend/d3.svg';
+var reduxImg = '../assets/frontend/redux.svg';
 
-var nodejsImg = './assets/backend/nodejs.svg';
-var expressImg = './assets/backend/express.svg';
-var mongoImg = './assets/backend/mongo.svg';
-var mysqlImg = './assets/backend/mysql.svg';
+var nodejsImg = '../assets/backend/nodejs.svg';
+var expressImg = '../assets/backend/express.svg';
+var mongoImg = '../assets/backend/mongo.svg';
+var mysqlImg = '../assets/backend/mysql.svg';
 
-var adobexdImg = './assets/othertools/adobexd.svg';
-var gitImg = './assets/othertools/git.svg';
-var jiraImg = './assets/othertools/jira.svg';
-var slackImg = './assets/othertools/slack.svg';
-var vscodeImg = './assets/othertools/vscode.svg';
+var adobexdImg = '../assets/othertools/adobexd.svg';
+var gitImg = '../assets/othertools/git.svg';
+var jiraImg = '../assets/othertools/jira.svg';
+var slackImg = '../assets/othertools/slack.svg';
+var vscodeImg = '../assets/othertools/vscode.svg';
 
 export const frontEnd=[
             {
