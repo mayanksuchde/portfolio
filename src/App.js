@@ -16,7 +16,6 @@ class App extends Component {
   }
    
   componentDidMount=()=>{
-    //this.demoAsyncCall().then(() => this.setState({ loading: false }));
     window.addEventListener("resize", this.resize.bind(this));
     this.resize();
   }
