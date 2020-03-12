@@ -31,13 +31,13 @@ export default class Contact extends Component {
         message: this.state.message
     }
     
-    axios.post('http://acme.mayank-suchade.com:8080/api/mail', data)
-    .then( res => {
-        this.setState({ sent: true }, this.resetForm())
-    })
-    .catch( () => {
-      console.log('Message not sent')
-    })
+    // axios.post('http://acme.mayank-suchade.com:8080/api/mail', data)
+    // .then( res => {
+    //     this.setState({ sent: true }, this.resetForm())
+    // })
+    // .catch( () => {
+    //   console.log('Message not sent')
+    // })
   }
   resetForm=()=>{
     this.setState({
