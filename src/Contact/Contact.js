@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import resume from '../assets/resume.pdf';
 import {OpenInNewRounded} from '@material-ui/icons'
-import axios from 'axios';
+//import axios from 'axios';
 import Button from '@material-ui/core/Button';
 
 import './Contact.scss';
@@ -24,12 +24,12 @@ export default class Contact extends Component {
       buttonText:"...Sending"
     })
 
-    let data = {
-        name: this.state.name,
-        email: this.state.email,
-        subject:this.state.subject,
-        message: this.state.message
-    }
+    // let data = {
+    //     name: this.state.name,
+    //     email: this.state.email,
+    //     subject:this.state.subject,
+    //     message: this.state.message
+    // }
     
     // axios.post('http://acme.mayank-suchade.com:8080/api/mail', data)
     // .then( res => {

@@ -9,13 +9,13 @@ import reactColors4 from '../assets/projects/reactColors4.png';
 
 import planImg from '../assets/projects/plan-react-app.jpg';
 import rgbImg from '../assets/projects/rgb-game.jpg';
-import mongoSVG from "../assets/backend/mongo.svg";
+//import mongoSVG from "../assets/backend/mongo.svg";
 import expressSVG from "../assets/backend/express.svg";
 import nodeSVG from "../assets/backend/nodejs.svg";
 import amplifySVG from '../assets/othertools/awsAmplify.svg'
 // import mySqlSVG from "./assets/backend/mysql.svg";
 import reactSVG from '../assets/frontend/react.svg'
-import reduxSVG from '../assets/frontend/redux.svg';
+//import reduxSVG from '../assets/frontend/redux.svg';
 import d3SVG from "../assets/frontend/d3.svg";
 import materialSVG from "../assets/frontend/material.svg";
 import ScssSVG from '../assets/frontend/scss.svg';
