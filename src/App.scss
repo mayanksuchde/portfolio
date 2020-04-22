@@ -107,7 +107,13 @@ body{
   
 //   transform: translateZ(-0.2px);
 // }
-
+.loading-screen{
+  @include fillScreen();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+}
 .bg{
   width: 100%;
   height:100%;

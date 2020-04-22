@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Home from './Home/Home';
+import {Home} from './Home/Home.tsx';
 import About from './About/About';
 import Skills from './Skills/Skills';
 import ProjectList from  './Projects/ProjectList';
 import Contact from './Contact/Contact';
 import Background from './Background';
-
+import ReactLoading from 'react-loading';
 import './App.scss';
 
 
@@ -13,11 +13,16 @@ class App extends Component {
   state = {
     isMobile: false,
     isScreen:"",
+    isDone:false,
   }
    
   componentDidMount=()=>{
     window.addEventListener("resize", this.resize.bind(this));
     this.resize();
+
+    setTimeout(() => {
+      this.setState({isDone:true})
+    }, 1000);
   }
   resize() {
     this.setState({isMobile:window.innerWidth<525});
@@ -37,7 +42,7 @@ class App extends Component {
   
 
   render() {
-   const {isScreen}=this.state;
+   const {isScreen,isDone}=this.state;
    
    let responsiveBg="";
     if(isScreen==="mobile"){
@@ -57,17 +62,22 @@ class App extends Component {
       responsiveBg=<Background top={0} />
     }
     return (
-        <div className="App">
-          <div className="bg">
-            {responsiveBg}
-            <div className='main'>
-              <Home  />
-              <About />
-              <Skills />
-              <ProjectList />
-              <Contact />
-            </div>
+        (!isDone)?
+          <div className="loading-screen">
+            <ReactLoading type="spinningBubbles" color="#2e9cca" height={90} width={90} />
           </div>
+        :
+          <div className="App">
+            <div className="bg">
+              {responsiveBg}
+              <div className='main'>
+                <Home isScreen={isScreen} />
+                <About />
+                <Skills />
+                <ProjectList />
+                <Contact />
+              </div>
+            </div>
           {/* </Parallax> */}
           
           
