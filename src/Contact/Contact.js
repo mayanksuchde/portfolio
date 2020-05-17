@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import resume from '../assets/resume.pdf';
 import {OpenInNewRounded} from '@material-ui/icons'
-//import axios from 'axios';
+import axios from 'axios';
 import Button from '@material-ui/core/Button';
 
 import './Contact.scss';
@@ -24,20 +24,20 @@ export default class Contact extends Component {
       buttonText:"...Sending"
     })
 
-    // let data = {
-    //     name: this.state.name,
-    //     email: this.state.email,
-    //     subject:this.state.subject,
-    //     message: this.state.message
-    // }
+    let data = {
+        name: this.state.name,
+        email: this.state.email,
+        subject:this.state.subject,
+        message: this.state.message
+    }
     
-    // axios.post('http://acme.mayank-suchade.com:8080/api/mail', data)
-    // .then( res => {
-    //     this.setState({ sent: true }, this.resetForm())
-    // })
-    // .catch( () => {
-    //   console.log('Message not sent')
-    // })
+    axios.post('https://vmp826lir0.execute-api.us-east-2.amazonaws.com/Prod/', data)
+    .then( res => {
+        this.setState({ sent: true }, this.resetForm())
+    })
+    .catch( () => {
+      console.log('Message not sent')
+    })
   }
   resetForm=()=>{
     this.setState({
