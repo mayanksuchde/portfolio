@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Home} from './Home/Home.tsx';
-import About from './About/About';
+import About from './About/About.tsx';
 import Skills from './Skills/Skills';
 import ProjectList from  './Projects/ProjectList';
 import Contact from './Contact/Contact';

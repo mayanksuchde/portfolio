@@ -43,6 +43,10 @@ const styles = theme => ({
     display:"flex",
     flexWrap:"wrap",
     justifyContent:"center",
+    "& svg":{
+      height:"24px",
+      padding:theme.spacing(1)
+    }
   },
   button:{
     margin:"3px"
@@ -73,12 +77,6 @@ const styles = theme => ({
       textAlign:"center",
       margin:"12px auto"
     },
-  },
-  buttons:{
-    "& svg":{
-      height:"24px",
-      padding:theme.spacing(1)
-    }
   },
   icon: {
     margin: theme.spacing(3),

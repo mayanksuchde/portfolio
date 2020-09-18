@@ -19,6 +19,7 @@
       }
       p{
         width:60%;
+        min-width: 35%;
         @media(max-width: $tablet){
           font-size: 14px;
         }
@@ -33,14 +34,14 @@
         top: 0;
         left: 0;
         // svg{
-        //   position: relative;    *** this is svg made by D3***
-        //   top:-125px;
+        //   position: relative;
+        //   top:50px;
         //   left: 0;
         // }
         img{
-          // position: relative;   *** these two lines will align the profile pic at center of the doughnut***
-          // top:206px;
-          left: 0;
+          // position: relative;
+          // top:-305px;
+          // left: 0px;
           border-radius:50%;
           width: 240px;
           height:240px;

@@ -31,12 +31,15 @@ export default class Contact extends Component {
         message: this.state.message
     }
     
-    axios.post('https://vmp826lir0.execute-api.us-east-2.amazonaws.com/Prod/', data)
+    axios.post('https://amf0e4gojb.execute-api.us-east-2.amazonaws.com/dev/user/sendmail', data)
     .then( res => {
         this.setState({ sent: true }, this.resetForm())
     })
     .catch( () => {
       console.log('Message not sent')
+      setTimeout(() => {
+        this.setState({ sent:true})
+      }, 1500);
     })
   }
   resetForm=()=>{
