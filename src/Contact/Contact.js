@@ -37,6 +37,9 @@ export default class Contact extends Component {
     })
     .catch( () => {
       console.log('Message not sent')
+      setTimeout(() => {
+        this.setState({ sent:true})
+      }, 1500);
     })
   }
   resetForm=()=>{
