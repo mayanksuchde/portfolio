@@ -1,10 +1,10 @@
 import React from "react";
 import {motion,AnimatePresence} from 'framer-motion';
 import './Home.scss';
-import {NameMobile} from './NameMobile'
+//import {NameMobile} from './NameMobile'
 import {GradientDef} from './GradientDef'
 
-export const Name:React.FC<{isScreen: string}>=({isScreen})=>{
+const Name=({isScreen})=>{
     
   const variants={
 		up:{
@@ -21,13 +21,14 @@ export const Name:React.FC<{isScreen: string}>=({isScreen})=>{
 		transition:{duration:1,ease:"easeOut"},
 		}
 	}
-    const MobileProps={
-      isScreen,
-      variants,
-    }
-    if(isScreen!=="desktop"){
-      return (<NameMobile {...MobileProps}  />)
-    }else{
+//     const MobileProps={
+//       isScreen,
+//       variants,
+//     }
+//     if(isScreen!=="desktop"){
+//         return ('');
+//     //   return (<NameMobile {...MobileProps}  />)
+//     }else{
       return (    
           <svg
             version="1.1"
@@ -716,5 +717,6 @@ export const Name:React.FC<{isScreen: string}>=({isScreen})=>{
             </g>
           </svg>  
       );
-    }
+    // }
 }
+export default Name;

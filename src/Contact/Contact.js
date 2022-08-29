@@ -1,89 +1,64 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {Button, Box, TextField} from '@mui/material';
 import resume from '../assets/resume.pdf';
-import {OpenInNewRounded} from '@material-ui/icons'
-import axios from 'axios';
-import Button from '@material-ui/core/Button';
-
+import { OpenInNewRounded, Send } from "@mui/icons-material";
 import './Contact.scss';
+import useInputState from '../hooks/useInputState';
+import { purple, red } from '@mui/material/colors';
 
-export default class Contact extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-      name: "",
-      email:"",
-      message:"",
-      subject:"",
-      sent:false,
-      buttonText:"Send Message"
+function Contact() {
+    const [name,handleName,resetName]=useInputState("");
+    const [email,handleEmail,resetEmail]=useInputState("");
+    const [subject,handleSubject,resetSubject]=useInputState("");
+    const [message,handleMessage,resetMessage]=useInputState("");
+    const primary = purple[200];
+    const handleSendMessage=(e) => {
+        e.preventDefault();
+        //console.log(name,message,subject,email)
+        //handle submission here
     }
-  }
-  formSubmit=(e)=>{
-    e.preventDefault();
-    this.setState({
-      buttonText:"...Sending"
-    })
-
-    let data = {
-        name: this.state.name,
-        email: this.state.email,
-        subject:this.state.subject,
-        message: this.state.message
-    }
-    
-    axios.post('https://amf0e4gojb.execute-api.us-east-2.amazonaws.com/dev/user/sendmail', data)
-    .then( res => {
-        this.setState({ sent: true }, this.resetForm())
-    })
-    .catch( () => {
-      console.log('Message not sent')
-      setTimeout(() => {
-        this.setState({ sent:true})
-      }, 1500);
-    })
-  }
-  resetForm=()=>{
-    this.setState({
-      name: '',
-      email: '',
-      subject:'',
-      message: '',
-      buttonText: 'Message Sent'
-    })
-  }
-  render() {
-
-    
-    return (
-      <div className='contact'>
-        <h2>Get In Touch</h2>
-        <div className="content">
-          <form onSubmit={e=>this.formSubmit(e)}>
-            <label htmlFor="name">Name:
-              <input onChange={e=>this.setState({name:e.target.value})} type="text" name="name" value={this.state.name} id=""/>
-            </label>
-            <label htmlFor="email">Email:
-              <input onChange={e=>this.setState({email:e.target.value})} type="text" name="email" value={this.state.email} />
-            </label>
-            <label htmlFor="subject">Subject:
-              <input onChange={e=>this.setState({subject:e.target.value})} type="text" placeholder="Subject" name="subject" value={this.state.subject} />
-            </label>
-            <label htmlFor="message">Message:
-              <textarea onChange={e=>this.setState({message:e.target.value})} name="subject" placeholder="Enter your message" value={this.state.message} >
-              </textarea>
-            </label> 
-            <input type="submit"  value={this.state.buttonText}/>
-          </form>
-        <div className="ResumeForm" > 
-          <form target="_blank" action={resume} method="get">
-            <Button type="submit">
-              View Resume
-              <OpenInNewRounded />
-            </Button>
-          </form>
-        </div>
-      </div>
-      </div>
-    )
-  }
+    return ( 
+        <div className="contact page">
+            <h2>Get in Touch</h2>
+            <div className='container'>
+            <Box
+                component="form"
+                className="contact-form"
+                sx={{
+                    '& > :not(style)': { m: 1, width: '100%' },
+                }}
+                noValidate
+                autoComplete="off"
+                >
+                <TextField className="input" fullWidth id="outlined-basic" label="Name" variant="outlined" value={name} onChange={handleName} />
+                <TextField className="input" fullWidth id="outlined-basic" label="Email" variant="outlined" value={email} onChange={handleEmail} />
+                <TextField className="input" fullWidth id="outlined-basic" label="Subject" variant="outlined" value={subject} onChange={handleSubject} />
+                <TextField 
+                    className="input"
+                    fullWidth
+                    id="outlined-basic" 
+                    label="Message" 
+                    variant="outlined" 
+                    multiline rows={4} 
+                    value={message}
+                    onChange={handleMessage}
+                />
+                <Button type="submit" variant='contained' onClick={e=>handleSendMessage(e)} >
+                    Send Message  
+                    <Send />
+                </Button>
+            </Box>
+                <div className='resume'>
+                    <form target="_blank" action={resume} method="get">
+                        <Button variant='contained' type="submit">
+                            View Resume
+                            <OpenInNewRounded />
+                        </Button>
+                    </form>
+                </div>
+            </div>
+        </div> 
+    );
 }
+
+export default Contact;

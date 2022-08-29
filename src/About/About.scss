@@ -1,31 +1,31 @@
 @import "../App.scss";
 .about{
-    @include fillScreen();
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
+
     &__content{
       align-self: center;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       height: 100%;
-      margin: auto 10%;
+      margin: 4% 10%;
       align-items: center;
-      @media (max-width: $mobile) {
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-      }
+    //   @media (max-width: $mobile) {
+    //     flex-direction: column-reverse;
+    //     justify-content: flex-end;
+    //   }
       p{
         width:60%;
         min-width: 35%;
-        @media(max-width: $tablet){
-          font-size: 14px;
-        }
-        @media(max-width: $mobile){
-          width:90%;
-        }
+        // @media(max-width: $tablet){
+        //   font-size: 14px;
+        // }
+        // @media(max-width: $mobile){
+        //   width:90%;
+        // }
         
         
       }
@@ -45,18 +45,18 @@
           border-radius:50%;
           width: 240px;
           height:240px;
-          @media(max-width: $laptop){
-            width: 240px;
-            height:240px;
-          }
-          @media(max-width: $tablet){
-            width: 150px;
-            height:150px;
-          }
-          @media (max-width: $mobile){
-            width: 120px;
-            height:120px;
-          }
+        //   @media(max-width: $laptop){
+        //     width: 240px;
+        //     height:240px;
+        //   }
+        //   @media(max-width: $tablet){
+        //     width: 150px;
+        //     height:150px;
+        //   }
+        //   @media (max-width: $mobile){
+        //     width: 120px;
+        //     height:120px;
+        //   }
         }
       }
     }

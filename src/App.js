@@ -1,89 +1,33 @@
-import React, { Component } from 'react';
-import {Home} from './Home/Home.tsx';
-import About from './About/About.tsx';
-import Skills from './Skills/Skills';
-import ProjectList from  './Projects/ProjectList';
+import Home from './Home/Home';
+import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
+import Skills from './Skills/Skills';
+import About from './About/About';
 import Background from './Background';
-import ReactLoading from 'react-loading';
 import './App.scss';
+import {WindowContextProvider} from './context/WindowSize';
+import { StyledEngineProvider } from '@mui/material/styles';
 
-
-class App extends Component {
-  state = {
-    isMobile: false,
-    isScreen:"",
-    isDone:false,
-  }
-   
-  componentDidMount=()=>{
-    window.addEventListener("resize", this.resize.bind(this));
-    this.resize();
-
-    setTimeout(() => {
-      this.setState({isDone:true})
-    }, 1000);
-  }
-  resize() {
-    this.setState({isMobile:window.innerWidth<525});
-    if(window.innerWidth<525){
-      this.setState({isScreen:"mobile"})
-    }else if(window.innerWidth<800){
-      this.setState({isScreen:"tablet"})
-    }else{
-      this.setState({isScreen:"desktop"})
-    }
-  }
-  
-
-  componentWillUnmount=()=>{
-    window.removeEventListener('resize', this.throttledHandleWindowResize);
-  }
-  
-
-  render() {
-   const {isScreen,isDone}=this.state;
-   
-   let responsiveBg="";
-    if(isScreen==="mobile"){
-      responsiveBg=<div>
-          <Background top={0} />
-          <Background top={1} />
-          <Background top={2} />
-          <Background top={3} />
-        </div>
-    }else if(isScreen==="tablet"){
-      responsiveBg=<div>
-          <Background top={0} />
-          <Background top={1} />
-          <Background top={1.4} />
+function App() {
+  return (
+    <StyledEngineProvider injectFirst>
+      <div className="App">
+        <WindowContextProvider>
+          <div className='main'>
+              <Home /> 
+              <About />
+              <Skills />
+              <Projects />
+              <Contact />
           </div>
-    }else if(isScreen==="desktop"){
-      responsiveBg=<Background top={0} />
-    }
-    return (
-        (!isDone)?
-          <div className="loading-screen">
-            <ReactLoading type="spinningBubbles" color="#2e9cca" height={90} width={90} />
-          </div>
-        :
-          <div className="App">
-            <div className="bg">
-              {responsiveBg}
-              <div className='main'>
-                <Home isScreen={isScreen} />
-                <About />
-                <Skills />
-                <ProjectList />
-                <Contact />
-              </div>
-            </div>
-          {/* </Parallax> */}
-          
-          
-        </div>
-    );
-  }
+          <div className="bg">
+            {/* {responsiveBg} */}
+            <Background />
+          </div>      
+        </WindowContextProvider>
+      </div>
+    </StyledEngineProvider>
+  );
 }
 
 export default App;

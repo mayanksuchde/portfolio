@@ -1,15 +1,11 @@
 @import "../Variables.scss";
 @import '../App.scss';
 
-.skills-container{
-  @include fillScreen()
-}
-
 .skills{
     display: flex;
     flex-direction: row;  
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     height:80%;
     @media(max-width: $mobile) {
       flex-direction: column;
@@ -17,11 +13,12 @@
     }
     .stack{
         width: 25%;
-        height: fit-content;
+        height: 100%;
         min-height: 80%;
+        padding: 40px 0px;
         @media(max-width: $tablet) {
-          // max-height: 510px;
-          // height:70%;
+          max-height: 510px;
+          height:70%;
         }
         @media(max-width: $mobile) {
           min-height: 30%;
@@ -46,9 +43,12 @@
         }
         .skill{
           list-style-type: none;
-          margin: 10px 30px;
+          margin: 8px 20px;
+          border-radius:20px;
+          padding: 4px 4px;
+          //box-shadow:-2px 1.5px 0px 0px rgba(0, 0, 0, 0.1);
           @media(max-width: $laptop) {
-            margin:8px 20px;
+            margin:4px 4px;
           }
           @media(max-width: $tablet) {
             margin:8px 14px;
@@ -59,11 +59,12 @@
           }
         
           &__img{
-            width:3.5rem;
-            height: 3.5rem;
+            width: 4.5rem;
+            height: 4.5rem;
+            margin: 0 5px;
             @media(max-width: $laptop) {
-              width:3.8rem;
-              height: 3.8rem;
+              width:3.1rem;
+              height: 3.1rem;
             }
             @media(max-width: $tablet) {
               width:2rem;
@@ -73,6 +74,9 @@
           h6{
             font-size:16px;
             margin:1%;
+            @media(max-width: $laptop) {
+              font-size: 14px;
+            }
             @media(max-width: $mobile) {
               font-size: 12px;
             }

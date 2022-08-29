@@ -20,7 +20,7 @@ import d3SVG from "../assets/frontend/d3.svg";
 import materialSVG from "../assets/frontend/material.svg";
 import ScssSVG from '../assets/frontend/scss.svg';
 
-export default [
+const details=[
     {
         name:"Portfolio",
         shortDesc:"",
@@ -48,4 +48,6 @@ export default [
         liveDemo:"https://master.d34pf6efnij2f2.amplifyapp.com/",
         screenshot:[reactColors,reactColors2,reactColors3,reactColors4]
       }
-    ]
+    ];
+
+    export default details;

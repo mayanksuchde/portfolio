@@ -9,6 +9,7 @@ var nodejsImg = '../assets/backend/nodejs.svg';
 var expressImg = '../assets/backend/express.svg';
 var mongoImg = '../assets/backend/mongo.svg';
 var mysqlImg = '../assets/backend/mysql.svg';
+var postgresqlImg = '../assets/backend/postgresql.svg';
 
 var adobexdImg = '../assets/othertools/adobexd.svg';
 var gitImg = '../assets/othertools/git.svg';
@@ -55,6 +56,10 @@ export const backEnd=[
                 {
                     name:'mySQL',
                     img:mysqlImg
+                },
+                {
+                    name:'PostgreSQL',
+                    img:postgresqlImg
                 }
 ];
 

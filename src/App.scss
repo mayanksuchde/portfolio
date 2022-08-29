@@ -1,154 +1,41 @@
 @import "./assets/fira-font/stylesheet.scss";
-@import "./Variables.scss";
+@import './Variables.scss';
 
-
-body{
-  background-color: #25274d;
+body {
+  margin: 0;
   font-family: "Fira Code";
+  background-color: #25274d;
 }
-.App {
-  
+.App { 
   text-align: center;
   color:#f7f8f8;
 }
-
-
-@mixin fillScreen {
-  width:100%;
-  height: 100vh;
-}
-
-// @mixin div-same-size-as-background-img() 
-//   { 
-//     background-repeat: repeat-y; 
-//     width: 100%; 
-//     height: 0; 
-//     padding-top:3023px; 
-//   }
-// // ======================================================Parallax Background=================================================================================
-
-// .bg{
-//   position: absolute;
-//   top:0;
-//   left:0;
-//   background-size: contain; 
-//   background-repeat: repeat-y; 
-//   width: 100%; 
-//   z-index: -1;
-// }
-// .parallax{
-//   @include div-same-size-as-background-img();
-//   position: absolute;
-//   top:0;
-//   height:stretch;
-//   z-index: -2;
-//   div{
-//     position: absolute;
-//     div{
-//       div{
-//         background-position-y: start;
-//       }
-//     }
-//   }
-// }
-
-
-// .parallax{
-  
-//   svg{
-//       @media (max-width:$tablet){
-//         height:fit-content;
-        
-//     }
-//   }
-// }
-// .overflow {
-//   overflow-y: scroll;
-//   overflow-x: hidden;
-//   height: 100%;
-//   -webkit-overflow-scrolling: touch;
-//   width: 100%;
-//   scroll-behavior: smooth;
-// }
-
-// .perspective {
-//   perspective: 1px;
-//   perspective-origin: top left;
-// }
-
-// .preserve {
-//   transform-style: preserve-3d;
-// }
-
-// .parallax {
-//   position: absolute;
-//   width:100%;
-//   height:fill;
-//   margin: auto;
-//   svg{
-//     width:180%;
-//     height: 110%;
-//     @media (max-width:$mobile) {
-//       width:300vh;
-//     }
-//   }
-  // top: 200px;
-  // margin-left: 250px;
-  // font-size: 24px;
-//}
-// .p1{
-//   transform: translateZ(-1.4px);
-// }
-// .p2{
-  
-//   transform: translateZ(-0.7px);
-// }
-// .p3{
-  
-//   transform: translateZ(-0.2px);
-// }
-.loading-screen{
-  @include fillScreen();
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin:auto;
+.main{
+  position: absolute;
+  height:auto;
+  z-index: 2;
 }
 .bg{
-  width: 100%;
-  height:100%;
+  position: absolute;
+  z-index: -2;
+}
+
+.page {
+  min-height: 100vh;
+  scroll-snap-type:y mandatory;
+  display: flex;
+  justify-content:center;
+  flex-direction:column;
 }
 .background{
-  position: absolute;
-  width:100%;
-  height: fit-content;
-}
-.parallax{
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  width:100%;
-  svg{
-    width:100%;
-    @media (max-width:$mobile) {
-      width: 150%;
-    }
+  width: 100%;
+  overflow: hidden;
+  .parallax {
+    position: absolute;
+    margin:auto;
   }
 }
-
-.main{
-  position: relative;
-  top:0;
-  left:0;
-  transform: translateZ(0);
-  z-index: 4;
-}
-
 h2{
   font-size: 40px;
   margin-top:0;
 }
-
-
-

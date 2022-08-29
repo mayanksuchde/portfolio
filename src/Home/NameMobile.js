@@ -1,7 +1,7 @@
 import React from 'react';
 import {GradientDef} from './GradientDef';
 import {motion} from 'framer-motion';
-export const NameMobile:React.FC<{isScreen: string,}>=({isScreen})=>{
+const NameMobile=({isScreen})=>{
 	const variants={
 		up:{
 			y:-90,
@@ -664,3 +664,4 @@ export const NameMobile:React.FC<{isScreen: string,}>=({isScreen})=>{
 	</svg>
 	)
 }
+export default NameMobile;

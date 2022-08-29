@@ -1,13 +1,13 @@
-import React from 'react';
-import { ReactComponent as GitLink } from '../assets/social/github.svg'
-import { ReactComponent as LinkedIn } from '../assets/social/linkedin.svg'
-import './Home.scss';
-import {Name} from './Name'
+import React,{ useContext } from 'react';
 import {motion} from 'framer-motion';
-//import {ArrowDownwardRounded} from '@material-ui/icons';
-
-export const Home:React.FC<{isScreen:string}>=({isScreen})=>{
- 
+import { ReactComponent as GitLink } from '../assets/socials/github.svg'
+import { ReactComponent as LinkedIn } from '../assets/socials/linkedin.svg';
+import Name from './Name';
+import NameMobile from './NameMobile';
+import {WindowContext} from '../context/WindowSize';
+function Home() {
+  const { clientHeight, clientWidth, clientScreen } = useContext(WindowContext);
+  console.log(clientScreen)
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -15,42 +15,42 @@ export const Home:React.FC<{isScreen:string}>=({isScreen})=>{
       transition: {
         delay:1.3,
         staggerChildren: 0.09
+        }
       }
     }
-  }
-  const variants={
-    up:{
-      y:-20
-    },
-    down:{
-      y:20
-    },
-    align:{
-      y:0,
-      transition:{delay:1.5,duration:0.8,type:'spring'},
-    },
-    initial:{
-      scale:0.1
-    },
-    final:{
-      scale:1, 
-      rotate:[180,360],
-      transition:{
-        delay:1.5,
-        duration:0.5
+    const variants={
+      up:{
+        y:-20
+      },
+      down:{
+        y:20
+      },
+      align:{
+        y:0,
+        transition:{delay:1.5,duration:0.8,type:'spring'},
+      },
+      initial:{
+        scale:0.1
+      },
+      final:{
+        scale:1, 
+        rotate:[180,360],
+        transition:{
+          delay:1.5,
+          duration:0.5
+        }
+      },
+      shake:{
+        scale: 1.3,
+              rotate:[359,1,0],
+              transition:{duration:0.3, stiffness: 100}
       }
-    },
-    shake:{
-      scale: 1.3,
-            rotate:[359,1,0],
-            transition:{duration:0.3, stiffness: 100}
+  
     }
-
-  }
-  return (
-    <div className='home'>
-      <Name isScreen={isScreen} />
-      <motion.div 
+    return ( 
+      <div className="home page">
+        {(clientWidth>768)?<Name />:<NameMobile/>}
+        <motion.div 
         variants={container}
         initial="hidden"
         animate="show"
@@ -87,7 +87,7 @@ export const Home:React.FC<{isScreen:string}>=({isScreen})=>{
           <LinkedIn  />
         </motion.a>
       </motion.div>
-      
-    </div>
-  )
+    </div> );
 }
+
+export default Home;

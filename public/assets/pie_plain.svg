@@ -1,0 +1,110 @@
+<svg
+   width="525"
+   height="525"
+   viewBox="65 41 192 192"
+   version="1.1"
+   id="svg8">
+  <g
+     id="layer1"
+     width="100%">
+     height="100%">
+    <path id="path872"
+       style="opacity:0.8192;fill:#002455;fill-opacity:1;stroke:#00ffff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       d="M 674.78906 417.43945 L 825.84766 230.30859 A 359.99999 359.99999 0 0 0 610.13867 158.58594 A 359.99999 359.99999 0 0 0 597.37695 158.81641 A 359.99999 359.99999 0 0 0 407.55078 221.05469 L 559.8418 409.67188 A 120 120 0 0 1 605.93555 398.66211 A 120 120 0 0 1 609.61914 398.58594 A 120 120 0 0 1 674.78906 417.43945 z "
+       transform="scale(0.26458333)" />
+    <path
+       id="path934"
+       style="opacity:0.8192;fill:#002455;fill-opacity:1;stroke:#00ffff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       d="M 727.0625 545.91016 L 952.23633 630.93555 A 359.99999 359.99999 0 0 0 970.2168 518.58594 L 969.80859 501.4707 A 359.99999 359.99999 0 0 0 834.61914 237.08398 L 699.94336 438.90625 A 120 120 0 0 1 730.08008 512.88086 L 730.21484 518.58594 A 120 120 0 0 1 727.0625 545.91016 z "
+       transform="scale(0.26458333)" />
+    <path
+       id="path930"
+       style="opacity:0.8192;fill:#002455;fill-opacity:1;stroke:#00ffff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       d="M 623.63086 637.83203 L 614.05078 878.56445 A 359.99999 359.99999 0 0 0 614.49609 878.56055 A 359.99999 359.99999 0 0 0 948.44922 641.87109 L 715.32617 576.47461 A 120 120 0 0 1 623.63086 637.83203 z "
+       transform="scale(0.26458333)" />
+    <path
+       id="path926"
+       style="opacity:0.8192;fill:#002455;fill-opacity:1;stroke:#00ffff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       d="M 499.60156 565.10352 L 266.85938 626.77539 A 359.99999 359.99999 0 0 0 602.99023 878.51172 L 590.76953 636.99805 A 120 120 0 0 1 499.60156 565.10352 z "
+       transform="scale(0.26458333)" />
+    <path
+       id="path922"
+       style="opacity:0.8192;fill:#002455;fill-opacity:1;stroke:#00ffff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       d="M 398.49414 227.42969 A 359.99999 359.99999 0 0 0 250.31836 527.14648 A 359.99999 359.99999 0 0 0 263.7168 616.24414 L 491.17773 533.73633 A 120 120 0 0 1 490.25 521.43945 A 120 120 0 0 1 532.48242 427.16797 L 398.49414 227.42969 z "
+       transform="scale(0.26458333)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="141.54456"
+       y="58.102421"
+       id="text941"><tspan
+         id="tspan939"
+         x="141.54456"
+         y="58.102421"
+         style="fill:#ffffff;stroke-width:0.264583">UI/ UX Flow</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.05;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="201.91109"
+       y="100.62936"
+       id="text949"><tspan
+         style="fill:#ffffff;stroke-width:0.264583"
+         id="tspan973"
+         x="201.91109"
+         y="100.62936">Design </tspan><tspan
+         x="201.91109"
+         y="108.0377"
+         style="fill:#ffffff;stroke-width:0.264583"
+         id="tspan951">Database & </tspan><tspan
+         x="201.91109"
+         y="115.44603"
+         style="fill:#ffffff;stroke-width:0.264583"
+         id="tspan953">Backend</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:0.75;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="174.44307"
+       y="177.49582"
+       id="text957"><tspan
+         id="tspan955"
+         x="174.44307"
+         y="177.49582"
+         style="font-size:7.05556px;fill:#ffffff;stroke-width:0.264583">Create a </tspan><tspan
+         x="174.44307"
+         y="185.43329"
+         style="font-size:7.05556px;fill:#ffffff;stroke-width:0.264583"
+         id="tspan959">Responsive</tspan><tspan
+         x="174.44307"
+         y="193.37077"
+         style="font-size:7.05556px;fill:#ffffff;stroke-width:0.264583"
+         id="tspan961">Front-End</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.87917px;line-height:1.25;font-family:sans-serif;fill:#ffffff;stroke-width:0.264583"
+       x="81.125832"
+       y="101.21413"
+       id="text36"><tspan
+         id="tspan34"
+         x="81.125832"
+         y="101.21413"
+         style="fill:#ffffff;stroke-width:0.264583">CI/CD</tspan><tspan
+         x="81.125832"
+         y="109.81309"
+         style="fill:#ffffff;stroke-width:0.264583"
+         id="tspan38">Deployment</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.87917px;line-height:1.25;font-family:sans-serif;fill:#ffffff;stroke-width:0.264583"
+       x="91.169975"
+       y="179.24944"
+       id="text42"><tspan
+         id="tspan40"
+         x="91.169975"
+         y="179.24944"
+         style="fill:#ffffff;stroke-width:0.264583">Quality &</tspan><tspan
+         x="91.169975"
+         y="187.8484"
+         style="fill:#ffffff;stroke-width:0.264583"
+         id="tspan46">Testing</tspan></text>
+  </g>
+</svg>

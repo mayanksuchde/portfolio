@@ -2,14 +2,12 @@
 @import '../Variables.scss';
 
 .home{
-    @include fillScreen();
+    //@include fillScreen();
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    svg{
-      
-    }
+    
     .subheaders{
       display: flex;
       flex-direction: row;
@@ -20,6 +18,7 @@
       font-weight: 500;
       h4{
         width:100%;
+        text-align:center;
       }
       & :nth-child(2){
         border-left:solid 2px $lightBlue;
