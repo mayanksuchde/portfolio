@@ -22,10 +22,9 @@ body {
 
 .page {
   min-height: 100vh;
-  scroll-snap-type:y mandatory;
-  display: flex;
-  justify-content:center;
-  flex-direction:column;
+  // display: flex;
+  // justify-content:center;
+  // flex-direction:column;
 }
 .background{
   width: 100%;
