@@ -1,4 +1,6 @@
 import Home from './Home/Home';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Skills from './Skills/Skills';
@@ -8,6 +10,8 @@ import './App.scss';
 import { StyledEngineProvider } from '@mui/material/styles';
 
 function App() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <StyledEngineProvider injectFirst>
       <div className="App">      
@@ -19,8 +23,7 @@ function App() {
               <Contact />
           </div>
           <div className="bg">
-             {/* {responsiveBg}  */}
-             <Background />
+             {isMobile?<><Background /><Background /></> :<Background />}
            </div>      
       </div>
     </StyledEngineProvider>

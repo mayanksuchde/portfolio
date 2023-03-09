@@ -20,20 +20,20 @@ function Background() {
     useEffect(() => {
         var rellax = new Rellax('.rellax')
         isMobile && setWidth(500)
-        isTablet && setWidth(500)
-        isSmScreen && setWidth(500)
+        isTablet && setWidth(800)
+        isSmScreen && setWidth(1200)
     }, [isMobile, isSmScreen, isTablet])
     
     return (
         <div className="background" >
             <div className="parallax p1 rellax" data-rellax-speed="30">
-                <Small w={width}/>
+                <Small/>
             </div>
             <div className="parallax p2 rellax" data-rellax-speed="20">
-                <Medium w={width} />
+                <Medium />
             </div>
             <div className="parallax p3 rellax" data-rellax-speed="10">
-                <Large w={width} />
+                <Large />
             </div>
         </div> 
         );

@@ -81,7 +81,7 @@ function ProjectMobile({list}) {
                         overflow="scroll"
                         sx={{
                             gap: 1,
-                            '--Card-padding': (theme) => theme.spacing(0.4),
+                            '--Card-padding': (theme) => theme.spacing(0),
                             width:'300px',
                         }}
                         >
