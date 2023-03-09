@@ -1,9 +1,11 @@
 import React,{useState} from 'react';
+import { useTheme } from '@mui/material/styles';
 import {Button, Box, TextField} from '@mui/material';
 //import resume from '../assets/resume.pdf';
 import { Send } from "@mui/icons-material";
 import './Contact.scss';
 import useInputState from '../hooks/useInputState';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function Contact() {
     const [name,handleName]=useInputState("");
@@ -11,6 +13,9 @@ function Contact() {
     const [subject,handleSubject]=useInputState("");
     const [message,handleMessage]=useInputState("");
     const [result, setResult] = useState("Send Message");
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
 
   const submitMessage = async (event) => {
     event.preventDefault();
@@ -36,43 +41,35 @@ function Contact() {
         <div className="contact page">
             <h2>Get in Touch</h2>
             <div className='container'>
-            <Box
-                component="form"
-                className="contact-form"
-                sx={{
-                    '& > :not(style)': { m: 1, width: '100%' },
-                }}
-                noValidate
-                autoComplete="off"
-                onSubmit={submitMessage}
-                >
-                <TextField className="input" name="name" fullWidth id="outlined-basic" label="Name" variant="outlined" value={name} onChange={handleName} />
-                <TextField className="input" name="email" fullWidth id="outlined-basic" label="Email" variant="outlined" value={email} onChange={handleEmail} />
-                <TextField className="input" name="subject" fullWidth id="outlined-basic" label="Subject" variant="outlined" value={subject} onChange={handleSubject} />
-                <TextField 
-                    className="input"
-                    fullWidth
-                    id="outlined-basic" 
-                    label="Message" 
-                    name="message"
-                    variant="outlined" 
-                    multiline rows={4} 
-                    value={message}
-                    onChange={handleMessage}
-                />
-                <Button type="submit" variant='contained' >
-                    {result}  
-                    <Send />
-                </Button>
-            </Box>
-                {/* <div className='resume'>
-                    <form target="_blank" action={resume} method="get">
-                        <Button variant='contained' type="submit">
-                            View Resume
-                            <OpenInNewRounded />
-                        </Button>
-                    </form>
-                </div> */}
+                <Box
+                    component="form"
+                    className={`contact-form ${isMobile && 'mobile-form'} ${isTablet && 'tablet-form'}`}
+                    sx={{
+                        '& > :not(style)': { m: 1, width: '100%' },
+                    }}
+                    noValidate
+                    autoComplete="off"
+                    onSubmit={submitMessage}
+                    >
+                    <TextField className="input" name="name" fullWidth id="outlined-basic" label="Name" variant="outlined" value={name} onChange={handleName} />
+                    <TextField className="input" name="email" fullWidth id="outlined-basic" label="Email" variant="outlined" value={email} onChange={handleEmail} />
+                    <TextField className="input" name="subject" fullWidth id="outlined-basic" label="Subject" variant="outlined" value={subject} onChange={handleSubject} />
+                    <TextField 
+                        className="input"
+                        fullWidth
+                        id="outlined-basic" 
+                        label="Message" 
+                        name="message"
+                        variant="outlined" 
+                        multiline rows={4} 
+                        value={message}
+                        onChange={handleMessage}
+                    />
+                    <Button type="submit" variant='contained' >
+                        {result}  
+                        <Send />
+                    </Button>
+                </Box>
             </div>
         </div> 
     );

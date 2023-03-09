@@ -1,16 +1,18 @@
-import React, { useContext } from 'react';
-import { WindowContext } from '../context/WindowSize';
+import React from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 import Project from './Project';
 import ProjectMobile from './ProjectMobile';
 import projArr from './projectDetails';
 import './Projects.scss';
 function Projects() {
-    const { clientHeight, clientWidth } = useContext(WindowContext);
-    return ( 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  return ( 
     <div className="projects page">
         <h2>Projects</h2>
         {
-          clientWidth<560?
+          isMobile?
             (<ProjectMobile list={projArr} />)
             :
               <ul>

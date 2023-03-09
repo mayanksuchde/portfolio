@@ -5,10 +5,14 @@ body {
   margin: 0;
   font-family: "Fira Code";
   background-color: #25274d;
+  
 }
 .App { 
   text-align: center;
   color:#f7f8f8;
+  @media only screen and (max-width: 600px) {
+      max-width:600px
+  }
 }
 .main{
   position: absolute;

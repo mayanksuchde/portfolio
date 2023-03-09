@@ -1,13 +1,15 @@
-import React,{ useContext } from 'react';
+import React from 'react';
 import {motion} from 'framer-motion';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { ReactComponent as GitLink } from '../assets/socials/github.svg'
 import { ReactComponent as LinkedIn } from '../assets/socials/linkedin.svg';
 import Name from './Name';
 import NameMobile from './NameMobile';
-import {WindowContext} from '../context/WindowSize';
 function Home() {
-  const { clientHeight, clientWidth, clientScreen } = useContext(WindowContext);
-  console.log(clientScreen)
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -49,7 +51,7 @@ function Home() {
     }
     return ( 
       <div className="home page">
-        {(clientWidth>768)?<Name />:<NameMobile/>}
+        {isMobile?<NameMobile />:<Name/>}
         <motion.div 
         variants={container}
         initial="hidden"
