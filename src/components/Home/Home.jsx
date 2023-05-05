@@ -62,7 +62,7 @@ function Home() {
             <motion.h4 
               variants={(i===1)?fadeIn('down','spring',1.8,0.75):fadeIn('up','spring',1.8,0.75)}
               key={p}
-              className='px-16'
+              className='px-16 text-white'
               >
               {p}
             </motion.h4>
