@@ -27,7 +27,7 @@ import rgbImg from './projects/rgb-game.jpg';
 import nodejs from './backend/nodejs.svg';
 import express from './backend/express.svg';
 import mongo from './backend/mongo.svg';
-import graphql from './backend/graphql.svg';
+import graphql from './backend/graphQL.svg';
 import postgres from './backend/postgres.svg';
 import python from './backend/python.svg';
 import socket from './backend/socket.svg';
