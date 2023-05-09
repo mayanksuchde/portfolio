@@ -20,6 +20,9 @@ import
     reactColors2,
     reactColors3,
     reactColors4,
+    petSitter1,
+    petSitter2,
+    petSitter3,
     planImg,
     rgbImg,
     nodejs,
@@ -39,47 +42,6 @@ import
     vscode,
     aws,
   } from '../assets';
-// import {
-//     mobile,
-//     backend,
-//     creator,
-//     web,
-//     javascript,
-//     typescript,
-//     html,
-//     css,
-//     reactjs,
-//     redux,
-//     tailwind,
-//     nodejs,
-//     mongodb,
-//     git,
-//     figma,
-//     docker,
-//     meta,
-//     starbucks,
-//     tesla,
-//     shopify,
-//     carrent,
-//     jobit,
-//     tripguide,
-//     threejs,
-//   } from "../assets";
-  
-  // export const navLinks = [
-  //   {
-  //     id: "about",
-  //     title: "About",
-  //   },
-  //   {
-  //     id: "work",
-  //     title: "Work",
-  //   },
-  //   {
-  //     id: "contact",
-  //     title: "Contact",
-  //   },
-  // ];
 
   const services = [
     {
@@ -351,6 +313,15 @@ const skills=[
   
   const projects = [
     {
+      name:"PetSitter App",
+      shortDesc:"Connects Pet Sitters with Pet owners.",
+      description:"This app allows Pet sitters and owners to make profile and connect with each other when owners require sitter's services. They can also chat and review the sitter and Sitters can set their hourly rate.",
+      // stack:[{name:"React",icon:reactSVG},{name:"Material UI",icon:materialSVG}],
+      gitLink:"https://github.com/mayanksuchde/colors-app",
+      liveDemo:"https://master.d34pf6efnij2f2.amplifyapp.com/",
+      screenshots:[petSitter1,petSitter2,petSitter3]
+    },
+    {
       name:"Portfolio",
       shortDesc:"Website showcasing some of my work",
       description:"This Portfolio worked as sort of my digital canvas so I have added and removed many npm libraries to make this site beautiful and responsive.\nThe beautiful Parallax background was created using a react animation library called React Spring. Material UI is another major library which allowed me to reuse their predefined components which reduced the production time. The Node mailer library helped me with developing the mailing system, where any message sent from the form on portfolio is directly sent my email address.\n   - Front-end - React and Material UI\n   - Backend - Node.js, Express and nodemailer \n   - Deploy - AWS Amplify and Route 53",
@@ -377,15 +348,6 @@ const skills=[
       liveDemo:"https://master.d34pf6efnij2f2.amplifyapp.com/",
       screenshots:[reactColors,reactColors2,reactColors3,reactColors4]
     },
-    {
-      name:"PetSitter App",
-      shortDesc:"Connects Pet Sitters with Pet owners when they need it.",
-      description:"This app allows Pet sitters and owners to make profile and connect with each other when owners require sitter's services. They can also chat and review the sitter and Sitters can set their hourly rate.",
-      // stack:[{name:"React",icon:reactSVG},{name:"Material UI",icon:materialSVG}],
-      gitLink:"https://github.com/mayanksuchde/colors-app",
-      liveDemo:"https://master.d34pf6efnij2f2.amplifyapp.com/",
-      screenshots:[reactColors,reactColors2,reactColors3,reactColors4]
-    }
   ];
   
   // export { services, technologies, experiences, testimonials, projects };

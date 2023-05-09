@@ -23,6 +23,9 @@ import reactColors3 from './projects/reactColors3.png';
 import reactColors4 from './projects/reactColors4.png';
 import planImg from './projects/plan-react-app.jpg';
 import rgbImg from './projects/rgb-game.jpg';
+import petSitter1 from './projects/petSitter1.png';
+import petSitter2 from './projects/petSitter2.png';
+import petSitter3 from './projects/petSitter3.png';
 
 import nodejs from './backend/nodejs.svg';
 import express from './backend/express.svg';
@@ -81,5 +84,8 @@ export {
     reactColors3,
     reactColors4,
     planImg,
-    rgbImg
+    rgbImg,
+    petSitter1,
+    petSitter2,
+    petSitter3
 }
