@@ -376,6 +376,15 @@ const skills=[
       gitLink:"https://github.com/mayanksuchde/colors-app",
       liveDemo:"https://master.d34pf6efnij2f2.amplifyapp.com/",
       screenshots:[reactColors,reactColors2,reactColors3,reactColors4]
+    },
+    {
+      name:"PetSitter App",
+      shortDesc:"Connects Pet Sitters with Pet owners when they need it.",
+      description:"This app allows Pet sitters and owners to make profile and connect with each other when owners require sitter's services. They can also chat and review the sitter and Sitters can set their hourly rate.",
+      // stack:[{name:"React",icon:reactSVG},{name:"Material UI",icon:materialSVG}],
+      gitLink:"https://github.com/mayanksuchde/colors-app",
+      liveDemo:"https://master.d34pf6efnij2f2.amplifyapp.com/",
+      screenshots:[reactColors,reactColors2,reactColors3,reactColors4]
     }
   ];
   

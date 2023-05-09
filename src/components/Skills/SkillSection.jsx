@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas }  from '@react-three/fiber';
-import { OrbitControls, Preload, PresentationControls } from '@react-three/drei';
+import { ArcballControls, Preload, Float } from '@react-three/drei';
 import Marbel from "./Marble";
 
 
@@ -14,12 +14,14 @@ const SkillSection=({name,stack})=>{
                     frameloop='demand'
                     gl={{preserveDrawingBuffer: true}}
                 >
+                    <ambientLight intensity={2} />
+                    <ArcballControls enableZoom={false} wMax={100} radiusFactor={10}/>
                     {stack.map((tech,index)=>(
                         <Suspense fallback={''} key={tech.name}>
                             <Marbel index={index} tech={tech} />
                         </Suspense>
                     ))}
-                <Preload all />
+                    <Preload all />
                 </Canvas>
             </div>
         </div>

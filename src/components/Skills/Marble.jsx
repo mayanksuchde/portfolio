@@ -33,9 +33,7 @@ const Marbel=({tech, index})=>{
     }
     return(
         <>
-            <ArcballControls enableZoom={false} wMax={100}/>
             <group>
-                <ambientLight intensity={0.18} />
                 <mesh  position={place(index)} scale={0.5}>
                     <icosahedronGeometry args={[1.5,5]} />
                     <meshStandardMaterial 
