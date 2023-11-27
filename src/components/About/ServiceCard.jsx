@@ -6,7 +6,7 @@ const ServiceCard = ({index,icon,title})=>{
     return(
         <Tilt className='p-4' >
             <motion.div
-            variants={fadeIn('right','spring',0.5,index, 0.75)}
+            variants={fadeIn('right','spring',2, index, 7)}
             className='w-full md:w-[240px] bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  p-[1px] rounded-[20px] shadow-card'
             >
                 <div 
